@@ -1,12 +1,12 @@
 <?php
 ob_start();
 $id=$_GET['id'];
-$result=showEditProductCat($id);
+$result=showEdit($id);
 
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
-    editProductCat($data,$id);
-    header("location:dashbord.php?m=product_cat&p=list");
+    editMenu($data,$id);
+    header("location:dashbord.php?m=menu&p=list");
 }
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -18,7 +18,7 @@ if(isset($_POST['btn'])){
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="../dashbord.php?m=index&p=index">خانه</a></li>
-                        <li class="breadcrumb-item active">ویرایش لیست دسته بندی محصولات</li>
+                        <li class="breadcrumb-item active">ویرایش منو</li>
                     </ol>
                 </div>
             </div>
@@ -33,15 +33,37 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title"> ویرایش لیست دسته بندی محصولات :  <?php echo $result['title']; ?></h3>
+                            <h3 class="card-title"> ویرایش منو :  <?php echo $result['title']; ?></h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form role="form" method="post">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان دسته بندی</label>
+                                    <label for="exampleInputEmail1">عنوان منو</label>
                                     <input type="text" class="form-control" name="frm[title]" placeholder="عنوان منو را وارد کنید" value="<?php echo $result['title']; ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">آدرس منو</label>
+                                    <input type="text" class="form-control" name="frm[url]" placeholder="لینک منو مورد نظر را وارد کنید" value="<?php echo $result['url']; ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>سر گروه</label>
+                                    <select class="form-control" name="frm[parent]" <?php  ?>>
+                                        <option value="0">سرگروه</option>
+                                        <?php
+                                        $subMenu=subMenu();
+                                        foreach ($subMenu as $subs){
+                                            echo "<option value=\"$subs[id]\" ";
+
+                                                if($result['chid']==$subs['id']){
+                                                    echo " selected";
+                                                }
+
+                                            echo ">$subs[title] </option>";
+                                        }
+                                        ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">ترتیب نمایش</label>

@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['btn'])){
        $data=$_POST['frm'];
-       addProductCat($data);
+       addProduct($data);
     }
 
 ?>
@@ -15,7 +15,7 @@
           <div class="col-sm-12">
             <ol class="breadcrumb float-sm-left">
               <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home">خانه</a></li>
-              <li class="breadcrumb-item active">افزودن دسته بندی جدید محصولات</li>
+              <li class="breadcrumb-item active">افزودن محصول جدید</li>
             </ol>
           </div>
         </div>
@@ -31,30 +31,40 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">افزودن دسته بندی جدید محصولات</h3>
+                <h3 class="card-title">افزودن محصول جدید</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" method="post">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">عنوان دسته بندی</label>
+                    <label for="exampleInputEmail1">عنوان محصول</label>
                     <input type="text" class="form-control" name="frm[title]" placeholder="عنوان منو را وارد کنید">
                   </div>
                   <div class="form-group">
-                      <label for="exampleInputPassword1">ترتیب نمایش</label>
-                      <input type="text" class="form-control" name="frm[sort]" placeholder="ترتیب نمایش">
+                    <label for="exampleInputPassword1">توضیحات</label>
+                    <textarea type="text" class="form-control" name="frm[text]" placeholder="توضیحات درباره محصول را بنویسید"></textarea>
                   </div>
-                  <label>وضعیت</label>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="frm[status]" value="1">  فعال
-                    </label>
+                  <div class="form-group">
+                    <label>دسته بندی</label>
+                    <select class="form-control" name="frm[procat]">
+                      <option value="0">سرگروه</option>
+                        <?php
+                        $proCat=proCat();
+                        foreach ($proCat as $val){
+                            echo "<option value=\"$val[id]\">$val[title] </option>";
+                        }
+                        ?>
+                    </select>
                   </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="frm[status]" value="0" checked>  غیر فعال
-                    </label>
+                  <div class="form-group">
+                      <label for="exampleInputFile">ارسال فایل</label>
+                      <div class="input-group">
+                          <div class="custom-file">
+                              <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
+                              <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                          </div>
+                      </div>
                   </div>
                 </div>
                 <!-- /.card-body -->

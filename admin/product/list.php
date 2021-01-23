@@ -7,7 +7,7 @@
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home"">خانه</a></li>
-                        <li class="breadcrumb-item active">لیست دسته بندی محصولات</li>
+                        <li class="breadcrumb-item active">لیست منو ها</li>
                     </ol>
                 </div>
             </div>
@@ -18,7 +18,7 @@
         <!-- Default box -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title"> لیست دسته بندی محصولات</h3>
+                <h3 class="card-title"> لیست منو ها</h3>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -27,7 +27,9 @@
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                 <tr>
-                                    <th> عنوان دسته بندی</th>
+                                    <th> عنوان منو</th>
+                                    <th> عنوان سرگروه</th>
+                                    <th> لینک منو</th>
                                     <th> ترتیب</th>
                                     <th> وضعیت</th>
                                     <th>ویرایش</th>
@@ -36,11 +38,22 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                    $listProductCat=listProductCatAdmin();
-                                    foreach($listProductCat as $val):
+                                    $listMenu=listMenuAdmin();
+                                    foreach($listMenu as $val):
                                 ?>
                                 <tr>
                                     <td><?php echo $val['title']; ?></td>
+                                    <td><?php
+                                        if($val['chid']==0){
+                                            echo "ندارد";
+                                        }
+                                        else{
+                                            $parent=selectParentMenu($val['chid']);
+                                            echo $parent;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td><?php echo $val['url']; ?></td>
                                     <td><?php echo $val['sort']; ?></td>
                                     <td>
                                         <?php
@@ -52,8 +65,8 @@
                                         }
                                         ?>
                                     </td>
-                                    <td><a href="dashbord.php?m=product_cat&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
-                                    <td><a href="dashbord.php?m=product_cat&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
+                                    <td><a href="dashbord.php?m=menu&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
+                                    <td><a href="dashbord.php?m=menu&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
                                 </tr>
                                 <?php
                                     endforeach;

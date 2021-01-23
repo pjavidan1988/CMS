@@ -201,7 +201,7 @@ if(!isset($_SESSION['username'])){
                 </li>
                 <li class="nav-item has-treeview menu-open">
                   <a href="#" class="nav-link">
-                    <i class="nav-icon fa fa-dashboard"></i>
+                    <i class="nav-icon fa fa-book"></i>
                     <p>
                       مدیریت منوها
                       <i class="right fa fa-angle-left"></i>
@@ -210,17 +210,40 @@ if(!isset($_SESSION['username'])){
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
                       <a href="dashbord.php?m=menu&p=list" class="nav-link">
-                        <i class="fa fa-circle-o nav-icon"></i>
+                        <i class="fa fa-list nav-icon"></i>
                         <p>لیست منوها</p>
                       </a>
                     </li>
                     <li class="nav-item">
                       <a href="dashbord.php?m=menu&p=add" class="nav-link">
-                        <i class="fa fa-circle-o nav-icon"></i>
-                        <p>افزودن منو جدید +</p>
+                        <i class="fa fa-plus-square-o nav-icon"></i>
+                        <p>افزودن منو جدید</p>
                       </a>
                     </li>
                   </ul>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-product-hunt"></i>
+                        <p>
+                              دسته بندی محصولات
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=product_cat&p=list" class="nav-link">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>لیست دسته بندی ها</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=product_cat&p=add" class="nav-link">
+                                <i class="fa fa-plus-square-o nav-icon"></i>
+                                <p>افزودن دسته بندی جدید</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item has-treeview">
                   <a href="#" class="nav-link">
