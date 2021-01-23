@@ -1,0 +1,34 @@
+//import compass
+@import "bootstrap";
+@import "template/varible";
+
+/* 1. Base */
+@import "template/base";
+
+/* 2. Layout */
+@import "template/element";
+@import "template/template-layout";
+
+/* 3. Page */
+@import "template/page";
+
+/* 4. Widget */
+@import "template/widget";
+
+/* 5. Widget product_cat */
+@import "template/widget-product";
+
+/* 6. Menu */
+@import "template/nav";
+
+/* 7. Post product_cat */
+@import "template/post-single";
+
+/* 8. Post single */
+@import "template/product";
+
+/* 9. Responsive */
+@import "template/responsive";
+
+/*   10. Adding for rtl   */
+@import "template/addrtl";
