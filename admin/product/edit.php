@@ -34,7 +34,7 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">افزودن محصول جدید</h3>
+                            <h3 class="card-title"> ویرایش محصول :  <?php echo $result['title']; ?></h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -69,13 +69,14 @@ if(isset($_POST['btn'])){
                                         <i class="fa fa-paperclip"></i> اضافه کردن تصویر
                                         <input type="file" name="img" id="input-b6" class="file">
                                     </div>
+                                        <img src="<?php echo $result['img'];?>" width="60">
                                     <p class="help-block">حداکثر 32MB</p>
                                 </div>
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" name="btn" class="btn btn-primary">افزودن</button>
+                                <button type="submit" name="btn" class="btn btn-primary">ویرایش</button>
                             </div>
                         </form>
 
