@@ -1,7 +1,7 @@
 <?php
 ob_start();
 $id=$_GET['id'];
-$result=showEdit($id);
+$result=showEditProduct($id);
 
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
@@ -17,13 +17,14 @@ if(isset($_POST['btn'])){
             <div class="row mb-2">
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
-                        <li class="breadcrumb-item"><a href="../dashbord.php?m=index&p=index">خانه</a></li>
-                        <li class="breadcrumb-item active">ویرایش منو</li>
+                        <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home">خانه</a></li>
+                        <li class="breadcrumb-item active">افزودن محصول جدید</li>
                     </ol>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
@@ -33,58 +34,48 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title"> ویرایش منو :  <?php echo $result['title']; ?></h3>
+                            <h3 class="card-title">افزودن محصول جدید</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="post">
+                        <form role="form" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان منو</label>
-                                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان منو را وارد کنید" value="<?php echo $result['title']; ?>">
+                                    <label for="exampleInputEmail1">عنوان محصول</label>
+                                    <input type="text" class="form-control" name="frm[title]" value="<?php echo $result['title'];?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">آدرس منو</label>
-                                    <input type="text" class="form-control" name="frm[url]" placeholder="لینک منو مورد نظر را وارد کنید" value="<?php echo $result['url']; ?>">
+                                    <label for="exampleInputPassword1">توضیحات</label>
+                                    <textarea type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>سر گروه</label>
-                                    <select class="form-control" name="frm[parent]" <?php  ?>>
+                                    <label>دسته بندی</label>
+                                    <select class="form-control" name="frm[procat]">
                                         <option value="0">سرگروه</option>
                                         <?php
-                                        $subMenu=subMenu();
-                                        foreach ($subMenu as $subs){
-                                            echo "<option value=\"$subs[id]\" ";
-
-                                                if($result['chid']==$subs['id']){
+                                        $proCat=proCat();
+                                        foreach ($proCat as $val){
+                                            echo "<option value=\"$val[id]\" ";
+                                                if($result['procat']==$val['id']){
                                                     echo " selected";
                                                 }
-
-                                            echo ">$subs[title] </option>";
+                                            echo ">$val[title] </option>";
                                         }
                                         ?>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">ترتیب نمایش</label>
-                                    <input type="text" class="form-control" name="frm[sort]" placeholder="ترتیب نمایش" value="<?php echo $result['sort']; ?>">
-                                </div>
-                                <label>وضعیت</label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="frm[status]" value="1" <?php if($result['status']==1){echo "checked";} ?>>  فعال
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="frm[status]" value="0" <?php if($result['status']==0){echo "checked";} ?>>  غیر فعال
-                                    </label>
+                                <div class="form-group pt-4">
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i> اضافه کردن تصویر
+                                        <input type="file" name="img" id="input-b6" class="file">
+                                    </div>
+                                    <p class="help-block">حداکثر 32MB</p>
                                 </div>
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" name="btn" class="btn btn-primary">ویرایش</button>
+                                <button type="submit" name="btn" class="btn btn-primary">افزودن</button>
                             </div>
                         </form>
 

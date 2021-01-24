@@ -1,9 +1,9 @@
 <?php
     if(isset($_POST['btn'])){
        $data=$_POST['frm'];
-       addProduct($data);
+       $img=uploader('img',"img/product/",$data['title'],"product");
+        addProduct($data,$img);
     }
-
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -35,11 +35,11 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" method="post">
+              <form role="form" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">عنوان محصول</label>
-                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان منو را وارد کنید">
+                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان محصول را وارد کنید">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">توضیحات</label>
@@ -57,14 +57,12 @@
                         ?>
                     </select>
                   </div>
-                  <div class="form-group">
-                      <label for="exampleInputFile">ارسال فایل</label>
-                      <div class="input-group">
-                          <div class="custom-file">
-                              <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
-                              <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
-                          </div>
+                  <div class="form-group pt-4">
+                      <div class="btn btn-default btn-file">
+                          <i class="fa fa-paperclip"></i> اضافه کردن تصویر
+                          <input type="file" name="img" id="input-b6" class="file">
                       </div>
+                      <p class="help-block">حداکثر 32MB</p>
                   </div>
                 </div>
                 <!-- /.card-body -->

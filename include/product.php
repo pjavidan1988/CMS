@@ -1,8 +1,8 @@
 <?php
-    function addProduct($data)
+    function addProduct($data,$img)
     {
         $connection = config();
-        $sql = "INSERT INTO product_tbl (title,text,procat) VALUES ('$data[title]','$data[text]','$data[procat]')";
+        $sql = "INSERT INTO product_tbl (title,text,procat,img) VALUES ('$data[title]','$data[text]','$data[procat]','$img')";
         mysqli_query($connection, $sql);
     }
 
@@ -16,45 +16,43 @@
         }
         return $result;
     }
+    function listProductAdmin()
+    {
+        $connection = config();
+        $sql = "SELECT * FROM product_tbl";
+        $row = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($row) > 0) {
+            while ($res = mysqli_fetch_assoc($row)) {
+                $result[] = $res;
+            }
+            return $result;
+        }
+    }
+    function selectProCat($catid)
+    {
+        $connection = config();
+        $sql = "SELECT * FROM product_cat WHERE id=$catid";
+        $row = mysqli_query($connection, $sql);
+        $res = mysqli_fetch_assoc($row);
+        return $res['title'];
+    }
+//
+    function deleteProduct($id)
+    {
+        $connection = config();
+        $sql = "DELETE FROM product_tbl WHERE id='$id'";
+        $row = mysqli_query($connection, $sql);
+    }
 
-//    function listMenuAdmin()
-//    {
-//        $connection = config();
-//        $sql = "SELECT * FROM product_tbl";
-//        $row = mysqli_query($connection, $sql);
-//        if (mysqli_num_rows($row) > 0) {
-//            while ($res = mysqli_fetch_assoc($row)) {
-//                $result[] = $res;
-//            }
-//            return $result;
-//        }
-//    }
-//
-//    function selectParentMenu($chid)
-//    {
-//        $connection = config();
-//        $sql = "SELECT * FROM product_tbl WHERE id=$chid";
-//        $row = mysqli_query($connection, $sql);
-//        $res = mysqli_fetch_assoc($row);
-//        return $res['title'];
-//    }
-//
-//    function deleteMenu($id)
-//    {
-//        $connection = config();
-//        $sql = "DELETE FROM product_tbl WHERE id='$id'";
-//        $row = mysqli_query($connection, $sql);
-//    }
-//
-//    function showEdit($id)
-//    {
-//        $connection = config();
-//        $sql = "SELECT * FROM product_tbl WHERE id='$id'";
-//        $row = mysqli_query($connection, $sql);
-//        $res = mysqli_fetch_assoc($row);
-//        return $res;
-//    }
-//
+    function showEditProduct($id)
+    {
+        $connection = config();
+        $sql = "SELECT * FROM product_tbl WHERE id='$id'";
+        $row = mysqli_query($connection, $sql);
+        $res = mysqli_fetch_assoc($row);
+        return $res;
+    }
+
 //    function editMenu($data, $id)
 //    {
 //        $connection = config();

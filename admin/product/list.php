@@ -27,46 +27,30 @@
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                 <tr>
-                                    <th> عنوان منو</th>
-                                    <th> عنوان سرگروه</th>
-                                    <th> لینک منو</th>
-                                    <th> ترتیب</th>
-                                    <th> وضعیت</th>
+                                    <th>نام محصول</th>
+                                    <th> دسته بندی محصول</th>
+                                    <th> توضیحات</th>
+                                    <th> تصویر محصول</th>
                                     <th>ویرایش</th>
                                     <th>حذف</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php
-                                    $listMenu=listMenuAdmin();
-                                    foreach($listMenu as $val):
+                                    $listProduct=listProductAdmin();
+                                    foreach($listProduct as $val):
                                 ?>
                                 <tr>
                                     <td><?php echo $val['title']; ?></td>
                                     <td><?php
-                                        if($val['chid']==0){
-                                            echo "ندارد";
-                                        }
-                                        else{
-                                            $parent=selectParentMenu($val['chid']);
+                                            $parent=selectProCat($val['procat']);
                                             echo $parent;
-                                        }
                                         ?>
                                     </td>
-                                    <td><?php echo $val['url']; ?></td>
-                                    <td><?php echo $val['sort']; ?></td>
-                                    <td>
-                                        <?php
-                                        if($val['status']==0){
-                                            echo "<span class='btn btn-danger'>غیر فعال</span>";
-                                        }
-                                        else{
-                                            echo "<span class='btn btn-success'> فعال</span>";
-                                        }
-                                        ?>
-                                    </td>
-                                    <td><a href="dashbord.php?m=menu&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
-                                    <td><a href="dashbord.php?m=menu&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
+                                    <td><?php echo $val['text']; ?></td>
+                                    <td><img src="<?php echo $val['img']; ?>" width="60"></td>
+                                    <td><a href="dashbord.php?m=product&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
+                                    <td><a href="dashbord.php?m=product&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
                                 </tr>
                                 <?php
                                     endforeach;

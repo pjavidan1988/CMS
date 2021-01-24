@@ -1,10 +1,13 @@
 <?php
 ob_start();
 include_once '../include/functions.php';
+include_once '../include/menu.php';
 if(!isset($_SESSION['username'])){
     header('location:index.php?login=first');
     ob_end_flush();
 }
+$activePage = "dashbord.php?m=menu&p=list";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -199,7 +202,7 @@ if(!isset($_SESSION['username'])){
                     </p>
                   </a>
                 </li>
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview">
                   <a href="#" class="nav-link">
                     <i class="nav-icon fa fa-book"></i>
                     <p>
@@ -209,22 +212,23 @@ if(!isset($_SESSION['username'])){
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="dashbord.php?m=menu&p=list" class="nav-link">
+                      <?php $list="dashbord.php?m=menu&p=list" ?>
+                      <a href="dashbord.php?m=menu&p=list" class="nav-link active" >
                         <i class="fa fa-list nav-icon"></i>
                         <p>لیست منوها</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="dashbord.php?m=menu&p=add" class="nav-link">
-                        <i class="fa fa-plus-square-o nav-icon"></i>
+                      <a href="dashbord.php?m=menu&p=add" class="nav-link active">
+                        <i class="fa fa-plus-square-o nav-icon "></i>
                         <p>افزودن منو جدید</p>
                       </a>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-product-hunt"></i>
+                        <i class="nav-icon fa fa-clipboard"></i>
                         <p>
                               دسته بندی محصولات
                             <i class="right fa fa-angle-left"></i>
@@ -232,15 +236,38 @@ if(!isset($_SESSION['username'])){
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="dashbord.php?m=product_cat&p=list" class="nav-link">
+                            <a href="dashbord.php?m=product_cat&p=list" class="nav-link active">
                                 <i class="fa fa-list nav-icon"></i>
                                 <p>لیست دسته بندی ها</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="dashbord.php?m=product_cat&p=add" class="nav-link">
+                            <a href="dashbord.php?m=product_cat&p=add" class="nav-link active">
                                 <i class="fa fa-plus-square-o nav-icon"></i>
                                 <p>افزودن دسته بندی جدید</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-shopping-bag"></i>
+                        <p>
+                            مدیریت محصولات
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=product&p=list" class="nav-link active">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>لیست محصولات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=product&p=add" class="nav-link active">
+                                <i class="fa fa-plus-square-o nav-icon"></i>
+                                <p>افزودن محصول جدید</p>
                             </a>
                         </li>
                     </ul>
