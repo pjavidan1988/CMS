@@ -1,7 +1,8 @@
 <?php
     if(isset($_POST['btn'])){
        $data=$_POST['frm'];
-       $img=uploader('img',"img/product/",$data['title'],"product");
+       $folder="pro-".rand();
+       $img=uploader('img',"img/product/",$folder,"product");
         addProduct($data,$img);
     }
 ?>
@@ -59,7 +60,7 @@
                   </div>
                   <div class="form-group pt-4">
                       <div class="btn btn-default btn-file">
-                          <i class="fa fa-paperclip"></i> اضافه کردن تصویر
+                          <i class="fa fa-paperclip"></i>اضافه کردن تصویر
                           <input type="file" name="img" id="input-b6" class="file">
                       </div>
                       <p class="help-block">حداکثر 32MB</p>

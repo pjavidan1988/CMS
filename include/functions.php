@@ -12,7 +12,9 @@ session_start();
     }
     function uploader($file,$dir,$folder,$name){
         $file=$_FILES[$file];
-        mkdir($dir.$folder);
+        if(!file_exists($folder)){
+            mkdir($dir.$folder);
+        }
         $filename=$file['name'];
         $array=explode(".",$filename);
         $ext=end($array);

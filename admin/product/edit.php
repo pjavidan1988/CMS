@@ -3,10 +3,12 @@ ob_start();
 $id=$_GET['id'];
 $result=showEditProduct($id);
 
+
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
-    editMenu($data,$id);
-    header("location:dashbord.php?m=menu&p=list");
+    $oldPic=$result['img'];
+    editProduct($data,$id,'img',$oldPic);
+    header("location:dashbord.php?m=product&p=list");
 }
 ?>
 <!-- Content Wrapper. Contains page content -->

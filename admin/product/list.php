@@ -7,7 +7,7 @@
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home"">خانه</a></li>
-                        <li class="breadcrumb-item active">لیست منو ها</li>
+                        <li class="breadcrumb-item active">لیست محصولات</li>
                     </ol>
                 </div>
             </div>
@@ -18,7 +18,7 @@
         <!-- Default box -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title"> لیست منو ها</h3>
+                <h3 class="card-title"> لیست محصولات</h3>
             </div>
             <div class="card-body">
                 <div class="row">

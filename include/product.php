@@ -3,7 +3,7 @@
     {
         $connection = config();
         $sql = "INSERT INTO product_tbl (title,text,procat,img) VALUES ('$data[title]','$data[text]','$data[procat]','$img')";
-        mysqli_query($connection, $sql);
+        mysqli_query($connection,$sql);
     }
 
     function proCat()
@@ -36,12 +36,21 @@
         $res = mysqli_fetch_assoc($row);
         return $res['title'];
     }
-//
+
     function deleteProduct($id)
     {
         $connection = config();
-        $sql = "DELETE FROM product_tbl WHERE id='$id'";
-        $row = mysqli_query($connection, $sql);
+        $sql1="SELECT * FROM product_tbl WHERE id='$id'";
+        $result=mysqli_query($connection,$sql1);
+        $row=mysqli_fetch_assoc($result);
+        $folder="img/product/".$row['title'];
+        $file=$row['img'];
+
+        unlink($file);
+        rmdir($folder);
+
+        $sql="DELETE FROM product_tbl WHERE id='$id'";
+        mysqli_query($connection,$sql);
     }
 
     function showEditProduct($id)
@@ -53,12 +62,18 @@
         return $res;
     }
 
-//    function editMenu($data, $id)
-//    {
-//        $connection = config();
-//        $sql = "UPDATE product_tbl SET title='$data[title]',url='$data[url]',sort='$data[sort]',chid='$data[parent]',status='$data[status]' WHERE id='$id'";
-//        mysqli_query($connection, $sql);
-//    }
+    function editProduct($data, $id,$img,$oldPic)
+    {
+        if($_FILES[$img]['name']!=''){
+            $pic=uploader('img',"img/product/",$data['title'],"product");
+        }
+        else{
+            $pic=$oldPic;
+        }
+        $connection = config();
+        $sql = "UPDATE product_tbl SET title='$data[title]',text='$data[text]',procat='$data[procat]',img='$pic' WHERE id='$id'";
+        mysqli_query($connection, $sql);
+    }
 //
 //    function listMenuDefault()
 //    {
