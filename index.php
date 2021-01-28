@@ -3,230 +3,269 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-    <meta name="robots" content="noindex, follow" />
 
 	<title>قالب HTML انرکاس</title>
 
-	<!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-
-	<!-- font-awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
 	<!-- preloader CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/preloader.css"> 
-
 	<!-- slider-pro CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/slider-pro.css">
-
 	<!-- slick CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 
-	<!-- main CSS -->
+	<!-- Main Style CSS CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+    <!-- font-awesome CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-	<!-- google font CSS -->
-	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+
+	 <!-- Fonts --> 
+	<link href='https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700,900' rel='stylesheet' type='text/css'>
 </head>
-
+		
 <body>
-	<!-- =====================================
+	<!-- =====================================================================
     	==== Start header -->
-	<!-- header-desktop -->
-	<header class="header">
-		<div class="topbar pt-30 pb-30">
-			<div class="container d-flex justify-content-between align-items-center">
-				<div class="top-bar">
-					<div class="header-language item-dropdown">
-						<a href="#" class="top-bar__item">انگلیسی
-							<i class="fa fa-angle-down"></i>
-						</a>
-						<ul class="content-dropdown">
-							<li class="active"><a href="#">انگلیسی</a></li>
-							<li><a href="#">فرانسوی</a></li>
-							<li><a href="#">عربی</a></li>
-						</ul>
-					</div>
-					<div class="header-currency item-dropdown">
-						<a href="#" class="top-bar__item">دلار آمریکا
-							<i class="fa fa-angle-down"></i>
-						</a>
-						<ul class="content-dropdown">
-							<li><a href="#"><span class="symbol">€</span>یورو</a></li>
-							<li class="active"><a href="#"><span class="symbol">$</span>دلار آمریکا</a></li>
-							<li><a href="#"><span class="symbol">£</span>GBP</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="otf-flex-item"></div>
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a class="logo" href="index.php">
-							<img src="assets/images/logo.png" alt=""> 
-						</a>
-					</div>
-					<!-- /Logo -->
-				</div>
-				<div class="otf-flex-item"></div>
-				<div class="site-header -icon">
-					<!-- acount -->
-					<div class="site-header__account">
-			            <a href="account.html" class="account-btn">
-			            	<img src="assets/images/icon_account.png" alt=""> 
-			            </a>
-					</div>
-					<!-- search -->
-					<div class="site-header__search">
-			            <div class="ps-search-btn">
-			              	 <i class="fa fa-search" aria-hidden="true"></i>
-			            </div>
-			            <div class="ps-search">
-						    <div class="ps-search__content">
-						     	<a class="ps-search__close" href="#"><span></span></a>
-						     	<h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
-						        <form method="get" class="searchform" action="#">
-									<div class="wiget-search input-group">
-										<input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . ."> 
 
-										<span class="input-group-addon input-large btn-search"> 
-										 	<span class="fa fa-search"></span>
-										 	<input type="submit" class="fa" value=""> 
-										 </span>
-									</div>
-								</form>
-						    </div>
-				    	</div>
-					</div>
-				    <!-- cart -->
-			      	<div class="site-header__cart item-dropdown">
-				        <a href="cart.html" class="site-header__cart-toggle">
-				          	<span class="cartcount">3</span>
-				           	<i class="fa fa-shopping-basket" aria-hidden="true"></i> 
-				            <span class="cartcost"><span class="money" data-currency-usd="$129.58">130 ه ت</span></span>
-				        </a>
-				        <div class="widget_shopping_cart_content  content-dropdown">
-							 <div class="cart_list ">
-							    <div class="media widget-product">
-							      <div class="media-left">
-								      <a href="product_single.html" class="image pull-left">
-									      <img src="assets/images/product/product_1.jpg" alt=""> 
-									  </a>
-							      </div>
-							      <div class="cart-main-content media-body">
-								      	<h3 class="name">
-									      <a href="product_single.html">
-									      	نسخه استاندارد ورزشی
-									      </a>
-								      	</h3>
-								     	 <p class="cart-item">
-								      		<span class="quantity">2 × <span class="price-amount amount">100<span class="price-currencySymbol">ه ت</span></span></span>  
-								      	 </p>
-								      <a href="#" class="remove" title="Remove this item">×</a>
-							      </div>
-							    </div>
-							    <div class="media widget-product">
-							      <div class="media-left">
-								      <a href="product_single.html" class="image pull-left">
-									      <img src="assets/images/product/product_2.jpg" alt=""> 
-									  </a>
-							      </div>
-							      <div class="cart-main-content media-body">
-								      <h3 class="name">
-									      <a href="product_single.html">
-									      	نسخه پریمیوم محدود
-									      </a>
-								      </h3>
-								      <p class="cart-item">
-								      <span class="quantity">1× <span class="price-amount amount">50<span class="price-currencySymbol">ه ت</span></span></span>           </p>
-								      <a href="#" class="remove" title="Remove this item">×</a>
-							      </div>
-							    </div>
-							     <div class="media widget-product">
-							      <div class="media-left">
-								      <a href="product_single.html" class="image pull-left">
-									      <img src="assets/images/product/product_3.jpg" alt=""> 
-									  </a>
-							      </div>
-							      <div class="cart-main-content media-body">
-								      <h3 class="name">
-									      <a href="product_single.html">
-									      	نسخه محدود طلایی
-									      </a>
-								      </h3>
-								      <p class="cart-item">
-								      <span class="quantity">2 × <span class="price-amount amount">100<span class="price-currencySymbol">ه ت</span></span></span>           </p>
-								      <a href="#" class="remove" title="Remove this item">×</a>
-							      </div>
-							    </div>
-							 </div>
-							  <p class="total"><strong>جمع کل:</strong>
-							     <span class="price-amount amount">
-							    <span class="price-currencySymbol">ه ت</span>450</span>
-							  </p>
-							  <p class="buttons clearfix">
-								  <a href="checkout.html" class="btn check-out btn-primary btn-normal pull-right">پرداخت</a>
-								  <a href="cart.html" class="btn view-cart btn-default btn-normal pull-left">مشاهده سبد خرید</a>
-						 	 </p>
-						</div>
+		<!-- header-desktop -->
+	<header class="header home2">
+		<!-- top-bar -->
+		<div class="topbar">
+			<div class="container">
+				<div class="top-bar">
+			        <div class="top-bar__left pull">
+			        	<div class="top-bar-register">
+				            <a class="top-bar__item" href="account.html">
+				            	<i class="fa fa-user-o" aria-hidden="true"></i>
+				            	ثبت نام
+				            </a>
+				        </div>
+			            <div class="top-bar-account">
+				            <a class="top-bar__item" href="#">
+				            	<i class="fa fa-lock" aria-hidden="true"></i>
+				            	ورود
+				            </a>
+			            	<div class="content-dropdown left">
+								<div class="account-inner ">
+								    <div class="login-form-head">
+								      	<span class="login-form-title">ورود به حساب</span>
+						      	<span class="pull-right">
+								     	 	<a class="register-link" href="account.html" title="Register">Create an Account</a>
+								     	 </span>
+								    </div>
+								    <form class="opal-login-form-ajax" data-toggle="validator">
+								        <p>
+								        <label>نام کاربری یا ایمیل<span class="required">*</span></label>
+								        <input name="username" type="text" required="" placeholder="نام کاربری">
+								        </p>
+								        <p>
+								        <label>رمز عبور <span class="required">*</span></label>
+								        <input name="password" type="password" required="" placeholder="رمز عبور">
+								        </p>
+								        <button type="submit" data-button-action="" class="btn btn-primary btn-block">ورود</button>
+								        <input type="hidden" name="action" value="">
+								        <input type="hidden" id="security-login" name="security-login" value="">
+								        <input type="hidden" name="login" value="">
+								    </form>
+								    <div class="login-form-bottom">
+								      		<a href="#" class="lostpass-link" title="رمز عبور خود را فراموش کرده اید؟">رمز عبور خود را فراموش کرده اید؟</a>
+								    </div>          
+								</div>
+							</div>     
+			        	</div>
 			        </div>
+			        <div class="top-bar__right">
+			        	<div class="header-language item-dropdown">
+							<a href="#" class="top-bar__item">انگلیسی
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="content-dropdown">
+								<li class="active"><a href="#">انگلیسی</a></li>
+								<li><a href="#">فرانسوی</a></li>
+								<li><a href="#">عربی</a></li>
+							</ul>
+						</div>
+						<div class="header-currency item-dropdown">
+							<a href="#" class="top-bar__item">دلار آمریکا
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="content-dropdown">
+								<li><a href="#"><span class="symbol">€</span>یورو</a></li>
+								<li class="active"><a href="#"><span class="symbol">$</span>دلار آمریکا</a></li>
+								<li><a href="#"><span class="symbol">£</span>GBP</a></li>
+							</ul>
+						</div>
+		        	</div>
 		        </div>
-		    </div>
-		</div>
+			</div>
+			<!-- /Container -->
+	    </div>
+	    <!-- /top-bar -->
+
 	    <!-- header-main -->
-	    <div class="header-main pb-10 pt-10">
+	    <div class="header-main pb-30">
 	    	<div class="container">
 			    <nav id="nav" class="navbar">
+			    	<div class="nav-collapse">
+						<span></span>
+					</div>
+					<div class="navbar-header">
+						<!-- Logo -->
+						<div class="navbar-brand">
+							<a class="logo" href="index.html"><img src="assets/images/logo_home.png" alt=""></a> 
+						</div>
+						<!-- /Logo -->
+					</div>
 					<!--  Main navigation  -->
-                    <?php
+					<div class="otf-flex-item"></div>
+					<?php
                     $row=listMenuDefault();
                     if($row):
                     ?>
 					<ul class="main-nav nav navbar-nav navbar-right">
-                        <?php
+						<?php
                             foreach ($row as $val):
                         ?>
-						<li class="dropdown active">
+						<li class="dropdown">
 							<a href="<?php echo $val['url']; ?>">
                                 <?php echo $val['title']; ?>
                             </a>
-
-                            <?php
+							<?php
                             $rows=listSubMenuDefault($val['id']);
                             if($rows):
                             ?>
 							<ul class="dropdown-menu">
-                            <?php
-                            foreach ($rows as $value):
+								<?php
+                            		foreach ($rows as $value):
                                 ?>
-				            	<li>
-                                    <a href="<?php echo $value['url']; ?>">
+				            	<li>                                    
+									<a href="<?php echo $value['url']; ?>">
                                         <?php echo $value['title']; ?>
                                     </a>
-                                </li>
-                            <?php endforeach; ?>
+				            	</li>
+							<?php endforeach; ?>
 			            	</ul>
-                            <?php endif; ?>
+							<?php endif; ?>
 						</li>
-                        <?php
+						<?php
                             endforeach;
                         ?>
 					</ul>
-                    <?php endif; ?>
+					<?php endif; ?>
 					<!-- /Main navigation -->
+					<div class="otf-flex-item"></div>
+					<div class="site-header -icon">
+						<!-- search -->
+							<div class="site-header__search">
+				            <div class="ps-search-btn">
+				              	<i class="fa fa-search" aria-hidden="true"></i>
+				            </div>
+				            <div class="ps-search">
+						     <div class="ps-search__content">
+						     	<a class="ps-search__close" href="#"><span></span></a>
+						     	<h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
+						        <form method="get" class="searchform" action="#">
+									<div class="wiget-search input-group">
+									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . ."> 
+
+									 <span class="input-group-addon input-large btn-search"> 
+									 	<span class="fa fa-search"></span>
+										<input type="submit" class="fa" value=""> 
+									 </span>
+									</div>
+								</form>
+						      </div>
+						    </div>
+						</div>
+							<!-- cart -->
+				      	<div class="site-header__cart item-dropdown">
+					        <a href="cart.html" class="site-header__cart-toggle">
+					          	<span class="cartcount">3</span>
+					           	<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+					            <span class="cartcost"><span class="money" data-currency-usd="0 ه ت ">0 ه ت </span></span>
+					        </a>
+					        <div class="widget_shopping_cart_content  content-dropdown">
+								 <div class="cart_list ">
+								    <div class="media widget-product">
+								      <div class="media-left">
+									      <a href="product_single.html" class="image pull-left">
+										      <img src="assets/images/product/product_1.jpg" alt=""> 
+										  </a>
+								      </div>
+								      <div class="cart-main-content media-body">
+									      	<h3 class="name">
+										      <a href="product_single.html">
+										      	نوشیدنی انرژی زا ورزشی
+										      </a>
+									      	</h3>
+									     	 <p class="cart-item">
+									      		<span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>  
+									      	 </p>
+									      <a href="#" class="remove" title="Remove this item">×</a>
+								      </div>
+								    </div>
+								    <div class="media widget-product">
+								      <div class="media-left">
+									      <a href="product_single.html" class="image pull-left">
+										      <img src="assets/images/product/product_2.jpg" alt=""> 
+										  </a>
+								      </div>
+								      <div class="cart-main-content media-body">
+									      <h3 class="name">
+										      <a href="product_single.html">
+										      	نوشیدنی انرژی زا ورزشی
+										      </a>
+									      </h3>
+									      <p class="cart-item">
+									      <span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>           </p>
+									      <a href="#" class="remove" title="Remove this item">×</a>
+								      </div>
+								    </div>
+								     <div class="media widget-product">
+								      <div class="media-left">
+									      <a href="product_single.html" class="image pull-left">
+										      <img src="assets/images/product/product_3.jpg" alt=""> 
+										  </a>
+								      </div>
+								      <div class="cart-main-content media-body">
+									      <h3 class="name">
+										      <a href="product_single.html">
+										      	نوشیدنی انرژی زا ورزشی
+										      </a>
+									      </h3>
+									      <p class="cart-item">
+									      <span class="quantity">2 × <span class="price-amount amount">200<span class="price-currencySymbol"> ه ت </span></span></span>           </p>
+									      <a href="#" class="remove" title="Remove this item">×</a>
+								      </div>
+								    </div>
+								 </div>
+								  <p class="total"><strong>جمع کل:</strong>
+								     <span class="price-amount amount">
+								    <span class="price-currencySymbol"> ه ت </span>700</span>
+								  </p>
+								  <p class="buttons clearfix">
+								  <a href="cart.html" class="btn view-cart btn-default btn-normal pull-right">مشاهده سبد خرید</a>
+								  <a href="#" class="btn check-out btn-primary btn-normal pull-left">پرداخت</a>
+							 	 </p>
+							</div>
+				        </div>
+			        </div>
 				</nav>
 	    	</div>
 	    </div>
 	    <!-- /header-main -->
 	</header>
-	<!-- /header-desktop -->
-	<!-- header-mobile -->
-	<div class="header-mobile">
+		<!--/header-desktop -->
+
+		<!-- header-mobile -->
+	<div class="header-mobile home2">
 		<div class="header-mobile-top">
 	        <div class="top-bar">
 				<div class="header-language item-dropdown">
@@ -287,24 +326,24 @@
 		      </button>
 		      <!-- logo -->
 		      <div class="navbar-brand">
-		      	<a class="logo" href="index.php"><img src="assets/images/logo.png" alt=""> </a>
+		      	<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""> </a> 
 		      </div>
 		      <!-- logo -->
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav">
-			       <li class="active dropdown">
-			          	<a href="index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه اصلی <span class="caret"></span></a>
+			        <li class="active dropdown">
+			          	<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه اصلی <span class="caret"></span></a>
 			          	<ul class="dropdown-menu">
-				          	<li><a href="../v2/index.html">صفحه اصلی 2</a></li>
-				            <li><a href="../v3/index.html">صفحه اصلی 3</a></li>
+				          	<li><a href="../v1/index.html">صفحه اصلی 1</a></li>
+				            <li><a href="../v2/index.html">صفحه اصلی 2</a></li>
 			         	</ul>
 		       		</li>
 			        <li class="dropdown">
-			          	<a href="product_grid.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pمحصولات <span class="caret"></span></a>
+			          	<a href="product_grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pمحصولات <span class="caret"></span></a>
 			          	<ul class="dropdown-menu">
-				          	<li><a href="product_grid.php">محصولات شبکه ای</a></li>
+				          	<li><a href="product_grid.html">محصولات شبکه ای</a></li>
 			            	<li><a href="product_list.html">محصولات لیستی</a></li>
 			                <li><a href="product_sidebar.html">محصولات با سایدبار</a></li>
 			            	<li><a href="product_single.html">ادامه مطلب محصول</a></li>
@@ -345,626 +384,885 @@
 			</li>
 		</ul>
     </div>
-	<!-- End header ====
-    	======================================= -->
+    	<!--/header-mobile -->
 
-	
-	<!-- =====================================
+	<!-- =====================================================================
+    	==== End header -->
+
+	<!-- =====================================================================
     	==== Start slider -->
-	<section class="section-main-slider">
-		<div class="main-slider my-slider slider-pro skin2" id="my-slider-1" data-slider-width="100%" data-slider-height="670">
-		    <div class="sp-slides">
-		        <!-- Slide 1 -->
-		       	<div class="sp-slide section-bg" style="background-image:url(assets/images/slider/home3_slider1.jpg)">
-		           		<span class="sp-layer main-slider__img" data-horizontal="250" data-vertical="100"  data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="400" data-hide-delay="400">
-							<img class="img-responsive" src="assets/images/slider/home3_slider1.png" height="593" alt="">
-						</span>
+	<div class="section-main-slider">
+		
+	    <div class="main-slider my-slider slider-pro" id="my-slider-1" data-slider-width="100%" data-slider-height="925">
+		    
+		        <div class="sp-slides text-white">
+		           <!-- Slide 1 -->
+		           	<div class="sp-slide section-bg" style="background-image:url(assets/images/home2_bg_header.jpg)">
+					    <div class="container">
 
-						<div class="sp-layer main-slider__text btn-sale text-white font-bold section-bg hidden-xs hidden-sm" data-horizontal="50%" data-vertical="140"  data-show-transition="up" data-hide-transition="right" data-show-duration="1200" data-show-delay="1200" data-hide-delay="1200" style="background-image:url(assets/images/slider/home3_slider1_3.png)">
-		                    <span class="btn-sale__title"> فقط </span>
-							<span class="btn-sale__price">59 ه ت</span>
-				        </div>
+					        <h2 class="sp-layer main-slider__title" data-horizontal="800" data-vertical="290" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
+									نیرویی اصیل
+							</h2>
+							<h2 class="sp-layer main-slider__title font-bold" data-horizontal="600" data-vertical="380" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
+									آسوده خاطر بنوشید
+							</h2>
 
-
-				        <h2 class="sp-layer main-slider__title font-italic" data-horizontal="10%" data-vertical="120" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
-							فروشگاه محصولات طبیعی
-						</h2>
-						<h2 class="sp-layer main-slider__title color-primary font-bold hidden-md" data-horizontal="29%" data-vertical="210" data-show-transition="up" data-hide-transition="right" data-show-duration="900" data-show-delay="900" data-hide-delay="900">
-							مراقیت پوست
-						</h2>
-				        <div class="sp-layer main-slider__text" data-horizontal="21%" data-vertical="320"  data-show-transition="up" data-hide-transition="right" data-show-duration="1000" data-show-delay="1000" data-hide-delay="1000">
-				            <p class="hidden-xs">
-				           		لورم ایپسوم متنی ساختگی با تولید سادگی نامفهوم ازست<br/>
-								این متنی ساختگیست
-							</p>
-				            <div class="main-slider__btn-group">
-				                <a class="mt-40 btn btn-features btn-primary btn-radius" href="product_grid.php">حالا بخرید <i class="fa fa-long-arrow-left" aria-hidden="true"></i> </a>
-				            </div>
-				        </div>
-				        <span class="sp-layer main-slider__img" data-horizontal="80%" data-vertical="500"  data-show-transition="up" data-hide-transition="right" data-show-duration="1200" data-show-delay="1200" data-hide-delay="1200">
-							<img class="img-responsive" src="assets/images/slider/home3_slider1_8.png" height="87" width="198" alt="">
-						</span>
-				</div>
-		        <!-- end sp-slide -->
-
-
-		        <!-- Slide 2-->
-		       	<div class="sp-slide section-bg" style="background-image:url(assets/images/slider/home3_slider2.jpg)">
-			        <h2 class="sp-layer main-slider__title font-italic text-center" data-horizontal="50%" data-vertical="120" data-show-transition="up" data-hide-transition="center" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
-						فروشگاه محصولات طبیعی
-					</h2>
-					<h2 class="sp-layer main-slider__title color-primary font-bold  text-center" data-horizontal="50%" data-vertical="210" data-show-transition="up" data-hide-transition="center" data-show-duration="900" data-show-delay="900" data-hide-delay="900">
-						مراقبت پوست
-					</h2>
-			        <div class="sp-layer main-slider__text text-center" data-horizontal="50%" data-vertical="310"  data-show-transition="up" data-hide-transition="center" data-show-duration="1000" data-show-delay="1000" data-hide-delay="1000">
-			            <p class="hidden-xs">
-							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. <br/>
-							چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-						</p>
-			            <div class="main-slider__btn-group">
-			                <a class="mt-40 btn btn-features btn-primary btn-radius" href="product_grid.php">حالا بخرید <i class="fa fa-long-arrow-left" aria-hidden="true"></i> </a>
-			            </div>
-			        </div>
-			        <div class="sp-layer main-slider__text btn-sale text-white font-bold section-bg hidden-xs hidden-sm" data-horizontal="20%" data-vertical="120"  data-show-transition="up" data-hide-transition="left" data-show-duration="1200" data-show-delay="1200" data-hide-delay="1200" style="background-image:url(assets/images/slider/home3_slider1_3.png)">
-		                    <span class="btn-sale__title"> فقط </span>
-							<span class="btn-sale__price">59 ه ت</span>
-				        </div>
-				</div>
-		        <!-- end sp-slide -->
-		    </div>
-		</div>
-	</section>
-	<!-- End slider ====
-    	======================================= -->
-
-	<!-- =====================================
-    	==== Start features-banner  -->
-	<section class="features-banner section-bg pt-120 pb-60 clearfix" style="background-image:url(assets/images/bg_0.jpg)">
+					        <div class="sp-layer main-slider__text" data-horizontal="600" data-vertical="500"  data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="1200" data-hide-delay="1200">
+					            <p>
+									لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از<br>
+									طراحان گرافیک است. چاپگرها و متون
+								</p>
+					            <div class="main-slider__btn-group">
+					                <a class="btn btn-features btn-primary mt-60" href="product_list.html">هم اکنون بخرید <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+					                </a>
+					            </div>
+					        </div>
+					        <span class="sp-layer main-slider__img" data-horizontal="0" data-vertical="120" data-width="45%" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="400" data-hide-delay="400">
+									<img class="img-responsive" src="assets/images/slider/image_slider1.png" height="612" width="759" alt="">
+							</span>
+							
+					    </div>
+					</div>
+		            <!-- end sp-slide -->
+		        </div>
+		    
+	        <!-- end sp-slides -->
+	    </div>
+	    <!-- end main-slider -->
+	
+    </div>
+	<!-- =====================================================================
+    	==== End slider -->
+	
+    <!-- =====================================================================
+    	==== Start feature-icon-absolute  -->
+	<div class="features feature-icon-absolute clearfix text-center">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 pb-60">
-					<div class="features-heading">
-			            <img class="features-heading__image" src="assets/images/feature/icon_feature.png" alt="">
-						<h2 class="features-heading__title">انرکاس چیست؟</h2>
-						<p class="features-heading__description">
-							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ<br/>
-							و با استفاده از طراحان گرافیک است. <br/>
-							چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-						</p>
-					</div>
-					<a class="btn btn-primary btn-radius btn-features" href="about.html">مشاهده بیشتر <i class="fa fa-long-arrow-left" aria-hidden="true"></i> </a>
-				</div>
-				<div class="col-md-6 pb-60">
-					<img src="assets/images/banner1.jpg" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- =====================================
-    	==== End features-banner  -->
-
-
-    <!-- =====================================
-    	==== Start features-skin  -->
-	<section class="features skin1 features-skin section-bg pt-100 pb-40 clearfix" style="background-image:url(assets/images/bg_1.jpg)">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-3"></div>
-				<div class="col-md-6 col-sm-9">
-					<div class="features-heading">
-			            <img class="features-heading__image" src="assets/images/feature/icon_feature.png" alt="">
-						<h2 class="features-heading__title">مراقبت از پوست با محصولات طبیعی</h2>
-						<p class="features-heading__description">
-							هیج چیز قادر نیست روایت قدرت را به استواری و صلابت خود آن بیان کند. قدرت همانند دلیل و منطق (حتی قبل از توسل به قهر و خشونتی که در اختیار دارد) روشن و قانع کننده است!
-						</p>
-					</div>
-				   	<div class="features_list">
-						<div class="features-images">
-							<img src="assets/images/feature/icon_feature_1.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>بدون مواد شیمیایی، 100% طبیعی</h4>
-							<p>
-								معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند
-							</p>
-						</div>
-					</div>	
+				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/feature/icon_feature_2.png" alt="">
+							<img src="assets/images/icon-feature1.png" alt="">
 						</div>
 						<div class="features-description">
-							<h4>کملا خالص</h4>
-							<p>
-								تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد
-							</p>
-						</div>
-					</div>	
-					<div class="features_list">
-						<div class="features-images">
-							<img src="assets/images/feature/icon_feature_3.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>بهترین محصول آرایش سال</h4>
-							<p>
-								چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند
-							</p>
-						</div>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- =====================================
-    	====End features-skin  -->
-
-
-	 <!-- =====================================
-    	==== Start features-step  -->
-	<section class="features skin1 features-step section-bg pt-100 pb-100 clearfix" style="background-image:url(assets/images/bg_4.jpg)">
-		<div class="container">
-			<div class="features-heading">
-	            <img class="features-heading__image" src="assets/images/feature/icon_feature.png" alt="">
-				<h2 class="features-heading__title">روش استفاده از انرکاس</h2>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-sm-9">
-					<div class="features_list">
-						<div class="features-images">
-							<img src="assets/images/step/home3_step_1.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>قدم اول: پاکسازی</h4>
-							<p>
-								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
-							</p>
-						</div>
-					</div>
-					<div class="features_list">
-						<div class="features-images">
-							<img src="assets/images/step/home3_step_2.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>قدم دوم: مرطوب کردن</h4>
-							<p>
-								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
-							</p>
-						</div>
-					</div>
-					<div class="features_list">
-						<div class="features-images">
-							<img src="assets/images/step/home3_step_3.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>قدم سوم: تبریک</h4>
-							<p>
-								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
+							<h4>بیشترین انرژی</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-sm-3">
-				</div>
-			</div>
-		</div>
-	</section>
-	 <!-- =====================================
-    	==== End features-step  -->
-
-
-	<section class="features skin1 bg-feature2 section-bg pt-100 pb-60 clearfix" style="background-image:url(assets/images/bg_2.jpg)">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6"></div>
-				<div class="col-md-6">
-					<div class="features-heading pb-60">
-			            <img class="features-heading__image" src="assets/images/feature/icon_feature.png" alt="">
-						<h2 class="features-heading__title">فواید اصلی انرکاس</h2>
-					</div>
-				   	<div class="features_list">
+				<div class="col-md-3 col-sm-6 features_content">
+					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/feature/icon_feature_4.png" alt="">
+							<img src="assets/images/icon-feature2.png" alt="">
 						</div>
 						<div class="features-description">
 							<h4>کاملا طبیعی</h4>
-							<p>
-								آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
 							</p>
 						</div>
-					</div>	
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/feature/icon_feature_5.png" alt="">
+							<img src="assets/images/icon-feature3.png" alt="">
 						</div>
 						<div class="features-description">
-							<h4>صرفه جویی</h4>
-							<p>
-								آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
+							<h4>میلی لیتر</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
 							</p>
 						</div>
-					</div>	
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/feature/icon_feature_6.png" alt="">
+							<img src="assets/images/icon-feature4.png" alt="">
 						</div>
 						<div class="features-description">
-							<h4>فعال در تمام مراحل</h4>
-							<p>
-								آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
+							<h4>کالری</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
 							</p>
 						</div>
-					</div>	
+					</div>
 				</div>
-				
 			</div>
 		</div>
-	</section>
+	</div>
+	<!-- =====================================================================
+    	==== End feature-icon-absolute  -->
 
-	 <!-- =====================================
-    	==== Start testimonials  -->
-	<section class="testimonials pt-100 clearfix">
+    <!-- =====================================================================
+    	==== Start feature-counter -->
+	<div class="features skin1 feature-counter section-bg clearfix" style="background-image:url(assets/images/home2_bg1.jpg)">
+    	<div class="container">
+    		<div class="features-heading pb-50">
+				<h2 class="features-heading__title">چرا ما رو انتخاب کنید</h2>
+				<p class="features-heading__description">
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+					<br/>
+					و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله 
+					<br/>در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی 
+				</p>
+			</div>
+    		<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="features_list">
+						<div class="features-images">
+							<img src="assets/images/counter/icon_counter1.png" alt="">
+						</div>
+						<div class="features-description">
+							<span class="counter">3,568</span>
+							<p>
+								مشتریان راضی
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="features_list">
+						<div class="features-images">
+							<img src="assets/images/counter/icon_counter2.png" alt="">
+						</div>
+						<div class="features-description">
+							<span class="counter">785</span>
+							<p>
+								مشتریان راضی
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="features_list">
+						<div class="features-images">
+							<img src="assets/images/counter/icon_counter3.png" alt="">
+						</div>
+						<div class="features-description">
+							<span class="counter">90</span><span>+</span>
+							<p>
+								مشتریان راضی
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <!-- =====================================================================
+    	==== End feature-counter -->
+
+     <!-- =====================================================================
+    	==== Start features-taste -->
+	<div class="features skin1 features-taste section-bg text-white clearfix  pt-100 pb-100" style="background-image:url(assets/images/home2_bg2.jpg)">
 		<div class="container">
+			<div class="features-heading">
+				<h2 class="features-heading__title">ترکیب های متفاوت</h2>
+			</div>
 			<div class="row">
-				<div class="features-heading pb-60 text-center">
-		            <img class="features-heading__image" src="assets/images/feature/icon_feature.png" alt="">
-					<h2 class="features-heading__title">مشتریان ما می گویند</h2>
+				<div class="col-md-4">
+					<div class="features_list pt-50 pb-50">
+						<div class="features-images">
+							<img src="assets/images/icon-feature5.png" alt="">
+						</div>
+						<div class="features-description">
+							<h4>کافئین</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+						</div>
+					</div>
+					<div class="features_list  pt-50 pb-50">
+						<div class="features-images">
+							<img src="assets/images/icon-feature6.png" alt="">
+						</div>
+						<div class="features-description">
+							<h4>ویتامین</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+						</div>
+					</div>
 				</div>
-				<div class="testimonials_content text-center">
-	 				<div class="owl-carousel owl-theme" data-pagination="true" data-nav="flase" data-items="3" data-large="3" data-medium="3" data-smallmedium="2" data-extrasmall="1" data-verysmall="1" data-autoplay="true">
-			            <div class="item">
-			             	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials1.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                <div class="testimonials__name">الکس مک کو</div>
-				                <div class="testimonials__job">موسس و مدیر </div>
-				            </div>
-			            </div>
-			            <div class="item">
-			            	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials2.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                 <div class="testimonials__name">آماندا میتم</div>
-				                <div class="testimonials__job">مدیر محصول</div>
-				            </div>
-			            </div>
-			            <div class="item">
-			            	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials3.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                <div class="testimonials__name">دنیل مور</div>
-				                <div class="testimonials__job">دنیل مور</div>
-				            </div>
-			            </div>
-			            <div class="item">
-			            	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials2.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                 <div class="testimonials__name">آماندا میتم</div>
-				                <div class="testimonials__job">مدیر محصول</div>
-				            </div>
-			            </div>
-			            <div class="item">
-			            	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials3.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                <div class="testimonials__name">دنیل مور</div>
-				                <div class="testimonials__job">دنیل مور</div>
-				            </div>
-			            </div>
-			            <div class="item">
-			             	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials1.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                <div class="testimonials__name">الکس مک کو</div>
-				                <div class="testimonials__job">موسس و مدیر </div>
-				            </div>
-			            </div>
-			            <div class="item">
-			            	<div class="testimonial_item">
-				            	<img src="assets/images/testimonials/testimonials2.png" alt="">
-				                <div class="testimonials__content">
-				                	آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
-								</div>
-				                 <div class="testimonials__name">آماندا میتم</div>
-				                <div class="testimonials__job">مدیر محصول</div>
-				            </div>
-			            </div>
-			        </div>
-	 			</div>
-			</div>
-		</div>
-	</section>
-	<!-- =====================================
-    	==== End testimonials  -->
-
-    <!-- =====================================
-    	==== Start features-policy  -->
-	<section class="features features-policy clearfix mt-20 mb-60">
-		<div class="container">
-			<div class="row">
-				<div class="features-border">
-					<div class="col-md-3 col-sm-6">
-					   	<div class="features_list text-center pb-40">
-							<div class="features-images">
-								<img src="assets/images/feature/icon_feature_7.png" alt="">
-							</div>
-							<div class="features-description">
-								<h4>ارسال رایگان</h4>
-								<p>
-									ارسال رایگان
-								</p>
-							</div>
-						</div>	
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-4">
+					<div class="features_list  pt-50 pb-50">
+						<div class="features-images">
+							<img src="assets/images/icon-feature7.png" alt="">
+						</div>
+						<div class="features-description">
+							<h4>فولیک اسید</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
-					   	<div class="features_list text-center pb-40">
-							<div class="features-images">
-								<img src="assets/images/feature/icon_feature_8.png" alt="">
-							</div>
-							<div class="features-description">
-								<h4>نمونه رایگان</h4>
-								<p>
-									با هر سفارش*
-								</p>
-							</div>
-						</div>	
-					</div>
-					<div class="col-md-3 col-sm-6">
-					   	<div class="features_list text-center pb-40">
-							<div class="features-images">
-								<img src="assets/images/feature/icon_feature_9.png" alt="">
-							</div>
-							<div class="features-description">
-								<h4>تخفیف های ویژه</h4>
-								<p>
-									در تمام طول سال
-								</p>
-							</div>
-						</div>	
-					</div>
-					<div class="col-md-3 col-sm-6">
-					   	<div class="features_list text-center pb-40">
-							<div class="features-images">
-								<img src="assets/images/feature/icon_feature_10.png" alt="">
-							</div>
-							<div class="features-description">
-								<h4>پشتیبانی آنلاین 7/24</h4>
-								<p>
-									پشتیبانی باور نکردنی
-								</p>
-							</div>
-						</div>	
+					<div class="features_list  pt-50 pb-50">
+						<div class="features-images">
+							<img src="assets/images/icon-feature8.png" alt="">
+						</div>
+						<div class="features-description">
+							<h4>گلیسین</h4>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- =====================================
-    	==== End features-policy  -->
+	</div>
+	 <!-- =====================================================================
+    	==== End features-taste -->
+    
+     <!-- =====================================================================
+    	==== Start product -->
+	<div class="products pt-60 pb-100">
+	     <div class="container">
 
-	 <!-- =====================================
-    	====Start product-feature  -->
-	<section class="product-feature section-bg section-bg-fix pt-160 pb-160 clearfix" style="background-image:url(assets/images/bg_3.jpg)">
-		<div class="container">
-	 		<div class="feature-product text-white">
-	 			<div class="col-md-6">
-	 				<div class="feature-product__images">
-			 		 	<img src="assets/images/product_feature.png" alt="">
-			 		</div>
-			 	</div>
-	 			<div class="col-md-6">
-					<h2 class="feature-product__title">کرم روشن کننده پوست با استاندارد سیب سبز</h2>
-					<p class="feature-product__description">
-						چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند
-					</p>
-					<div class="product-feature__meta">
-						<div class="product-price">
-							<span class="amout">
-								<span class="money" data-currency-usd="80 ه ت ">80 ه ت </span>
-								<span class="old-price">109 ه ت </span>
-							</span>
+	     	<div class="row">
+	     		<div class="col-md-4 pt-40">
+	     			<div class="text-center">
+		     			<div class="features-heading skin2">
+							<h2 class="features-heading__title">ویژه امروز</h2>
 						</div>
-						<a href="product_single.html" class="btn btn-primary btn-radius btn-features">اضافه به سبد خرید<i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- =====================================
-    	==== End product-feature -->
+						<div class="product_deal product-skin2">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_deal.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-meta">
+									<div class="deal-clock"></div>
 
-	<!-- =====================================
-    	====Start instagram  -->
-	<div class="widget-instagram-feed pt-80 clearfix">
-		<div class="container">
-	        <ul class="instagram-content clearfix">            
-				<li class="item">
-					<a href="#">
-						<img src="assets/images/instagram/instagram_1.jpg" alt="">  
-					</a> 
-					<div class="insta-info">
-						<div class="insta-meta">
-							<span><i class="fa fa-heart-o" aria-hidden="true"></i>(5)</span>
-							<span><i class="fa fa-comments-o" aria-hidden="true"></i>(10)</span>
-						</div>
-					</div>
-				</li>
-				<li class="item">
-					<a href="#">
-						<img src="assets/images/instagram/instagram_2.jpg" alt="">   
-					</a>
-					<div class="insta-info">
-						<div class="insta-meta">
-							<span><i class="fa fa-heart-o" aria-hidden="true"></i>(5)</span>
-							<span><i class="fa fa-comments-o" aria-hidden="true"></i>(10)</span>
-						</div>
-					</div>
-				</li>
-				<li class="item">
-					<a href="#">
-						<img src="assets/images/instagram/instagram_3.jpg" alt="">  
-					</a> 
-					<div class="insta-info">
-						<div class="insta-meta">
-							<span><i class="fa fa-heart-o" aria-hidden="true"></i>(5)</span>
-							<span><i class="fa fa-comments-o" aria-hidden="true"></i>(10)</span>
-						</div>
-					</div>
-				</li>
-				<li class="item">
-					<a href="#">
-						<img src="assets/images/instagram/instagram_4.jpg" alt="">  
-					</a> 
-					<div class="insta-info">
-						<div class="insta-meta">
-							<span><i class="fa fa-heart-o" aria-hidden="true"></i>(5)</span>
-							<span><i class="fa fa-comments-o" aria-hidden="true"></i>(10)</span>
-						</div>
-					</div>
-				</li>
-				<li class="item">
-					<a href="#">
-						<img src="assets/images/instagram/instagram_5.jpg" alt="">  
-					</a> 
-					<div class="insta-info">
-						<div class="insta-meta">
-							<span><i class="fa fa-heart-o" aria-hidden="true"></i>(5)</span>
-							<span><i class="fa fa-comments-o" aria-hidden="true"></i>(10)</span>
-						</div>
-					</div>
-				</li>
-				<li class="item">
-					<a href="#">
-						<img src="assets/images/instagram/instagram_6.jpg" alt="">   
-					</a>
-					<div class="insta-info">
-						<div class="insta-meta">
-							<span><i class="fa fa-heart-o" aria-hidden="true"></i>(5)</span>
-							<span><i class="fa fa-comments-o" aria-hidden="true"></i>(10)</span>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-    </div>
-   	<!-- =====================================
-    	==== End instagram -->
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نسخه استاندارد ورزشی</a>
+									</h4>
 
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="14 ه ت">14 ه ت</span>
+										</span>
+									</div>
+									<div class="product-footer">
+										<a href="cart.html" class="btn btn-primary">اضافه به سبد خرید<i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+									</div>
+								</div><!-- /.product-meta -->
+							</div>
+					    </div>
+					</div>
+	     		</div>
+				<div class="col-md-8  pt-40">
+					<div class="features-heading skin2">
+						<h2 class="features-heading__title">آخرین محصولات</h2>
+					</div>
+					
+					<ul class="columns-4 text-center product-skin2">
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_1.jpg" alt="">
+										</a>
+									</div>
+									<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+									<div class="product-price">
+											<span class="amout">
+												<span class="money" data-currency-usd="7 ه ت">7 ه ت</span>
+											</span>
+											<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+										</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_2.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
 
- 	<!-- =====================================
-    	==== Start footer -->
-    <footer class="site-footer site-footer-3 clearfix">
-    	<div class="site-footer__main section-bg" style="background-image:url(assets/images/bg_footer.jpg)">
-	    	<div class="container">
-	    		<div class="col-md-5 col-sm-6 col-xs-12 footer-block pb-30">
-		    		 <img src="assets/images/logo.png" alt=""> 
-		    		 <p class="address pt-30">دفتر ما: ایران، تهران، تهران بزرگ، میدان آزادی. . .<br/>
-						تلفن: 09123456789<br/>
-						پست الکترونیک: email@email.com
-					</p>
-					<ul class="social pt-10">
-						<li>
-							<a href="#"><i class="fa fa-facebook"></i></a>
+									<div class="product-price">
+											<span class="amout">
+												<span class="money" data-currency-usd="6 ه ت">6 ه ت</span>
+											</span>
+											<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+										</div>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="#"><i class="fa fa-twitter"></i></a>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_3.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="12 ه ت">12 ه ت</span>
+										</span>
+										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+									</div>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="#"><i class="fa fa-google"></i></a>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_4.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="4 ه ت">4 ه ت</span>
+										</span>
+										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+									</div>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="#"><i class="fa fa-instagram"></i></a>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_5.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="15 ه ت">15 ه ت</span>
+										</span>
+										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+									</div>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="#"><i class="fa fa-pinterest"></i></a>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_6.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="8 ه ت">8 ه ت</span>
+										</span>
+										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_7.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="16 ه ت">16 ه ت</span>
+										</span>
+										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-product">
+							<div class="product-block">
+								<div class="product-image ">
+									<div class="product-thumbnail">
+										<a href="product_single.html" title="">
+											<img class="product-featured-image" src="assets/images/product/product_8.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-actions">
+										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+										<i class="fa fa-heart-o"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+										    <i class="fa fa-eye"></i>
+										</a>
+										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+										    <i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								<div class="product-meta">
+									<h4 class="product-name">
+										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+									</h4>
+
+									<div class="product-price">
+										<span class="amout">
+											<span class="money" data-currency-usd="10 ه ت">10 ه ت</span>
+										</span>
+										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+									</div>
+								</div>
+							</div>
 						</li>
 					</ul>
-		    	</div>
-		    	<div class="col-md-2 col-sm-6 col-xs-12 footer-block pb-30">
-	    			<h3 class="widget-title">لینک های مفید</h3>
-	    			<ul>
-	    				<li><a href="about.html">درباره ما</a></li>
-	    				<li><a href="contact.html">تماس با ما</a></li>
-	    				<li><a href="blog.html">اخبار</a></li>
-	    				<li><a href="account.html">حساب من</a></li>
-	    				<li><a href="faq.html">سؤالات متداول</a></li>
-	    				<li><a href="account.html">ثبت نام</a></li>
-	    			</ul>
-		    	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <!-- =====================================================================
+    	==== End product -->
 
-		    	<div class="col-md-2 col-sm-6 col-xs-12 footer-block pb-30">
-	    			<h3 class="widget-title">فروشگاه مرکزی</h3>
-	    			<ul>
-	    				<li><a href="product_sidebar.html">پاک کننده ها و تینر ها</a></li>
-	    				<li><a href="product_sidebar.html">سرم ها و تقویت کننده ها</a></li>
-	    				<li><a href="product_sidebar.html">مراقبت روزانه</a></li>
-	    				<li><a href="product_sidebar.html">مراقبت شبانه</a></li>
-	    				<li><a href="product_sidebar.html">مراقبت چشم</a></li>
-	    				<li><a href="product_sidebar.html">ضد آفتاب</a></li>
-	    			</ul>
-		    	</div>
-		    	<div class="col-md-3 col-sm-6 col-xs-12 footer-block pb-30">
-		    		<h3 class="widget-title">ارتباط با ما</h3>
-		    		<div class="features skin1">
-		    			<div class="features_list">
-							<div class="features-images">
-								<img src="assets/images/icon_mail.png" alt="">
-							</div>
-							<div class="features-description">
-								<h4>از ما سؤالی دارید؟</h4>
-								<p>
-									email.example@gmail.com
-								</p>
-							</div>
-						</div>
-						<div class="features_list">
-							<div class="features-images">
-								<img src="assets/images/icon_phone.png" alt="">
-							</div>
-							<div class="features-description">
-								<h4>1800-1314-1009</h4>
-								<p>
-									1800-1314-1009
-								</p>
-							</div>
-						</div>
+	<!-- =====================================================================
+    	==== Start newsletter -->
+	<div class="contact-form pt-100 pb-250">
+		<div class="container">
+	    	<div class="row">
+	    		<div class="contact-form-container">
+		    		<div class="col-md-6 col-sm-12">
+		    			<div class="contact-form_heading text-uppercase">
+		    				<span>10% تخفیف ویژه برای</span>
+		    				<h4>اولین سفارش</h4>
+		    			</div>
 		    		</div>
-		    		<div class="payment pt-20">
-		        		<img src="assets/images/payment.png" alt="">
-		        	</div>
-		    	</div>
+		    		<div class="col-md-6 col-sm-12">
+						<div class="newsletter">
+							<p class="newsletter-description">برای خوش آمدگویی به تمام مشتریان جدیدمان کد تخفیف داریم<br/> که می توانید برای دریافت 10% تخفیف ویژه اولین سفارش استفاده کنید.</p>
+							<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="form-horizontal">
+								<div class="newsletter-form">
+									<div class="input-group">
+										<input class="form-control" type="email" name="EMAIL" placeholder="آدرس ایمیل شما" required="">
+									  	<span class="input-group-btn">
+										  	<button type="submit" class="search-submit btn">
+										        <span class="fa fa-paper-plane-o" aria-hidden="true"></span>
+										   	</button>
+									  	</span>
+								    </div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =====================================================================
+    	==== End newsletter -->
+
+	<!-- =====================================================================
+    	==== Start gallery -->
+	<div class="gallery feature-absolute pb-80">
+	    <div class="container">
+	    	<ul class="gallery-content">
+	    		<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images1.jpg" title="">
+				        	<img src="assets/images/gallery/images1.jpg" alt="">
+				        	<div class="insta-info">
+							     <i class="fa fa-search-plus"></i>
+				        	</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images2.jpg" title="">
+				        	<img src="assets/images/gallery/images2.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images3.jpg" title="">
+				        	<img src="assets/images/gallery/images3.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images4.jpg" title="">
+				        	<img src="assets/images/gallery/images4.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images5.jpg" title="">
+				        	<img src="assets/images/gallery/images5.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images6.jpg" title="">
+				        	<img src="assets/images/gallery/images6.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images7.jpg" title="">
+				        	<img src="assets/images/gallery/images7.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images8.jpg" title="">
+				        	<img src="assets/images/gallery/images8.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images9.jpg" title="">
+				        	<img src="assets/images/gallery/images9.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+								</div>
+						 </a>		        
+				    </div>
+				</li>
+				<li class="gallery-item">
+				    <div class="popup-gallery">
+				        <a class="gallery-item-img" href="assets/images/gallery/large/images10.jpg" title="">
+				        	<img src="assets/images/gallery/images10.jpg" alt="">
+				        	<div class="insta-info">
+								<i class="fa fa-search-plus"></i>
+							</div>
+				        </a>		        
+				    </div>
+				</li>
+	    	</ul>
+	    </div>
+	</div>
+	<!-- =====================================================================
+    	==== End gallery -->
+
+	<!-- =====================================================================
+    	==== Start blog -->
+	<div class="blog clearfix">
+	     <div class="container">
+	     	<div class="features-heading skin2">
+				<h2 class="features-heading__title">اخبار جدید</h2>
+			</div>
+
+	     	<div class="row">
+		     	<div class="col-md-4 col-sm-4">
+					<div class="blog-grid">
+						<article class="post">
+							<div class="blog-img">
+								<img class="img-responsive" src="assets/images/blog/blog1.jpg" alt="">
+							</div>
+							<div class="blog-content">
+								
+								<span class="post-date">28 فروردین 1398</span>
+								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
+								<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+								</p>
+								<div class="entry-meta">
+									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
+									<span class="comment"><a href="#">0</a>نظرات</span>
+									<span class="like">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>
+										پسندیدن<a href="#"> 2 </a></span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="blog-grid">
+						<article class="post">
+							<div class="blog-img">
+								<img class="img-responsive" src="assets/images/blog/blog2.jpg" alt="">
+							</div>
+							<div class="blog-content">
+								
+								<span class="post-date">28 فروردین 1398</span>
+								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
+								<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+								</p>
+								<div class="entry-meta">
+									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
+									<span class="comment"><a href="#">0</a>نظرات</span>
+									<span class="like">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>
+										پسندیدن<a href="#"> 2 </a></span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="blog-grid">
+						<article class="post">
+							<div class="blog-img">
+								<img class="img-responsive" src="assets/images/blog/blog3.jpg" alt="">
+							</div>
+							<div class="blog-content">
+								
+								<span class="post-date">28 فروردین 1398</span>
+								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
+								<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+								</p>
+								<div class="entry-meta">
+									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
+									<span class="comment"><a href="#">0</a>نظرات</span>
+									<span class="like">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>
+										پسندیدن<a href="#"> 2 </a></span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+	     </div>
+	 </div>
+	<!-- =====================================================================
+    	==== End blog -->
+
+
+	<!-- =====================================================================
+    	==== Start footer -->
+   	<footer class="site-footer site-footer-2 clearfix">
+    	<div class="site-footer__main">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-md-6 col-sm-12 col-xs-12 footer-block">
+			    		<img src="assets/images/logo.png" alt="">
+			    		<p class="address pt-30">دفتر ما: ایران، تهران، تهران بزرگ، میدان آزادی. . .<br>
+							تلفن: 09123456789<br>
+							پست الکترونیک: email@email.com
+						</p>
+			    	</div>
+			    	<div class="col-md-3 col-sm-6 col-xs-12 footer-block footer-1">
+		    			<h3 class="widget-title">لینک های مفید</h3>
+		    			<ul>
+		    				<li><a href="about.html">درباره ما</a></li>
+		    				<li><a href="contact.html">تماس با ما</a></li>
+		    				<li><a href="blog.html">اخبار</a></li>
+		    				<li><a href="account.html">حساب من</a></li>
+		    				<li><a href="faq.html">سؤالات متداول</a></li>
+		    				<li><a href="account.html">ثبت نام</a></li>
+		    			</ul>
+			    	</div>
+			    	
+			    	<div class="col-md-3 col-sm-6 col-xs-12 footer-block footer-3">
+			    		<h3 class="widget-title">زمان ارائه خدمت</h3>
+		    			<ul>
+		    				<li>
+		    					<span>دوشنبه :</span>
+		    					<span>9am - 5pm</span>
+		    				</li>
+		    				<li>
+		    					<span>سه شنبه:</span>
+		    					<span>9am - 1pm</span>
+		    				</li>
+		    				<li>
+		    					<span>چهارشنبه :</span>
+		    					<span>9am - 5pm</span>
+		    				</li>
+		    				<li>
+		    					<span>پنجشنبه :</span>
+		    					<span>9am - 1pm</span>
+		    				</li>
+		    				<li>
+		    					<span>جمعه :</span>
+		    					<span>9am - 1pm</span>
+		    				</li>
+		    				<li>
+		    					<span>شنبه -  یکشنبه:</span>
+		    					<span>تعطیل</span>
+		    				</li>
+		    			</ul>
+			    	</div>
+			    </div>
 		    </div>
 	   </div>
-	  <div class="site-footer__copyright">
+	   <div class="site-footer__copyright">
 	   		<div class="container">
-	    		<div class="copyright pull-right">
-	        		© 1398. تمامی حقوق برای ما محفوظ است.<a href="#" target="_blank">انرکاس</a>
+	   			<div class="copyright_container">
+	   				<div class="col-md-4 col-sm-6">
+			   			<ul class="social">
+							<li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-google"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+							</li>
+						</ul>
+					</div>
+		    		<div class="copyright col-md-4 col-sm-6">
+		        		© 1398. تمامی حقوق برای ما محفوظ است.<a href="#" target="_blank">انرکاس</a>
+		        	</div>
+		        	<div class="payment col-md-4 col-sm-12">
+		        		<img src="assets/images/payment.png" alt="">
+		        	</div>
 	        	</div>
 	       </div>
 	   </div>
-    </footer>
-    <!-- =====================================
+	</footer>
+	<!-- =====================================================================
     	==== End footer -->
 
-   	<!-- back-to-top-->
+   <!-- Back to top -->
     <div id="back-to-top"></div>
-    <!-- back-to-top -->
-     
+    <!--/Back to to -->
 
-    <!-- =====================================
-    	====Start preloader -->
+    <!-- =====================================================================
+    	====Start Preloader -->
     <div id="preloader">
 		<div class="preloader">
 			<span></span>
@@ -973,10 +1271,11 @@
 			<span></span>
 		</div>
 	</div>
-    <!-- =====================================
-    	==== End preloader -->
+	<!-- =====================================================================
+    	====End Preloader -->
 
- 	<!-- =====================================
+
+	<!-- =====================================
     	====Start all js here -->
 
 	<!-- jquery js-->
@@ -988,22 +1287,29 @@
 	<!-- slick js-->
 	<script src="assets/js/slick.min.js"></script>
 
-	<!-- spritespin js-->
+	<!-- jquery-ui js-->
 	<script src="assets/js/jquery-ui.min.js"></script>
 
 	<!-- sliderPro js-->
 	<script src="assets/js/jquery.sliderPro.min.js"></script>
 
-    <!-- waypoints js-->
-    <script src="assets/js/jquery.waypoints.js"></script>
+	<!-- deal js-->
+	<script src="assets/js/fastclick.min.js"></script>
+	<script src="assets/js/timber.js"></script>
 
-	<!-- counterup js-->
+	<!-- Magnific js-->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+	<!-- counter js-->
+    <script src="assets/js/jquery.waypoints.js"></script>
 	<script src="assets/js/jquery.counterup.min.js"></script>
 
-	<!-- custom js-->
+	<!-- main js-->
 	<script src="assets/js/custom.js"></script>
+	
 	<!-- =====================================
-    	==== End all js herej -->
-     
+    	==== End all js here -->
+
+   
 </body>
 </html>

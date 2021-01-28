@@ -65,12 +65,22 @@
     function editProduct($data, $id,$img,$oldPic)
     {
         if($_FILES[$img]['name']!=''){
-            $pic=uploader('img',"img/product/",$data['title'],"product");
+            $a=explode("/",$oldPic);
+            $total=count($a);
+            $folder=$a[$total-2];
+            $pic=uploader('img',"img/product/",$folder,"product");
         }
         else{
             $pic=$oldPic;
         }
         $connection = config();
+        $sql1="SELECT * FROM product_tbl WHERE id='$id'";
+        $result=mysqli_query($connection,$sql1);
+        $row=mysqli_fetch_assoc($result);
+        $file=$row['img'];
+
+        unlink($file);
+
         $sql = "UPDATE product_tbl SET title='$data[title]',text='$data[text]',procat='$data[procat]',img='$pic' WHERE id='$id'";
         mysqli_query($connection, $sql);
     }

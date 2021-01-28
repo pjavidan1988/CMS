@@ -1,5 +1,5 @@
 /*-----------------------------
-  filter product_cat
+  filter product
  -------------------------------*/
 .widget_filter {
     .ps-slider {
@@ -10,7 +10,6 @@
         position: relative;
         border-radius: 0;
         border: none;
-        direction: ltr;
     }
     .ui-slider-range {
         position: absolute;
@@ -352,4 +351,7 @@ h4.grand-totall-title span {
 .order-wrapper {
     padding: 10px 30px 30px;
     border: 1px solid $border-color-second;
+}
+.ps-slider, .slick-slider, .owl-carousel {
+    direction: ltr;
 }

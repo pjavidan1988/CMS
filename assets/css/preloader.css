@@ -22,7 +22,7 @@
 }
 .preloader span {
     display: inline-block;
-    background-color: #8fac47;
+    background-color: #e41a1e;
     width: 25px;
     height: 25px;
     -webkit-animation: 1s preload ease-in-out infinite;

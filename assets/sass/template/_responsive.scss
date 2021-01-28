@@ -1,3 +1,8 @@
+@media only screen and (min-width: 1200px){
+	.features-taste .features-heading{
+		padding-bottom: 60px;
+	}
+}
 @media only screen and (min-width: 767px){
     .header-mobile,
     .footer-mobile-bar{
@@ -7,11 +12,21 @@
 		float: right;
 		
 	}
-	.product-feature{
-		.product-feature__meta{
-			a.btn {
-	 			display: flex;
-	 		}
+	ul.columns-4{
+		display: flex;
+	    flex-wrap: wrap;
+		border-bottom: solid 1px #dadada;
+	    padding: 0px;
+		li{
+			display: inline-block;
+			flex: 0 0 25%;
+	    	max-width: 25%;
+			border-left: solid 1px $border-color;
+			border-top: solid 1px $border-color;
+			&:nth-child(4n+4){
+				border-left: none;
+			}
+			
 		}
 	}
 }
@@ -26,6 +41,9 @@
 		.product-meta{
 			padding-top: 20px;
 		}
+	}
+	.payment{
+		padding-top: 20px;
 	}
 	.sidebar{
         padding-top: 60px;
@@ -69,5 +87,4 @@
 	.account-form-container{
 		padding: 20px;
 	}
-	
 }
