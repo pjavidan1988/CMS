@@ -66,6 +66,10 @@ if(isset($_POST['btn'])){
                                         ?>
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">عنوان محصول</label>
+                                    <input type="text" class="form-control" name="frm[productprice]" value="<?php echo $result['productprice'];?>">
+                                </div>
                                 <div class="form-group pt-4">
                                     <div class="btn btn-default btn-file">
                                         <i class="fa fa-paperclip"></i> اضافه کردن تصویر

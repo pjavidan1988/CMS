@@ -5186,7 +5186,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #f8f5f5;
+  background-color: #090909;
   color: #fff;
 }
 
@@ -12192,7 +12192,6 @@ ul.columns-4 .product-block:hover .product-actions > a {
     max-width: 25%;
     border-left: solid 1px #dadada;
     border-top: solid 1px #dadada;
-    border-bottom: solid 1px #dadada;
   }
   ul.columns-4 li:nth-child(4n+4) {
     border-left: none;

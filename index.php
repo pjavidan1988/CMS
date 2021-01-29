@@ -332,40 +332,34 @@
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <?php
+                $row=listMenuDefault();
+                if($row):
+                ?>
 		      	<ul class="nav navbar-nav">
+                    <?php
+                    foreach ($row as $val):
+                    ?>
 			        <li class="active dropdown">
-			          	<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه اصلی <span class="caret"></span></a>
+			          	<a href="<?php echo $val['url']; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $val['title']; ?><span class="caret"></span></a>
+                        <?php
+                        $rows=listSubMenuDefault($val['id']);
+                        if($rows):
+                        ?>
 			          	<ul class="dropdown-menu">
-				          	<li><a href="../v1/index.html">صفحه اصلی 1</a></li>
-				            <li><a href="../v2/index.html">صفحه اصلی 2</a></li>
+                            <?php
+                            foreach ($rows as $value):
+                            ?>
+				          	<li><a href="<?php echo $value['url']; ?>"><?php echo $value['title']; ?></a></li>
+                            <?php endforeach; ?>
 			         	</ul>
+                        <?php endif; ?>
 		       		</li>
-			        <li class="dropdown">
-			          	<a href="product_grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pمحصولات <span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				          	<li><a href="product_grid.html">محصولات شبکه ای</a></li>
-			            	<li><a href="product_list.html">محصولات لیستی</a></li>
-			                <li><a href="product_sidebar.html">محصولات با سایدبار</a></li>
-			            	<li><a href="product_single.html">ادامه مطلب محصول</a></li>
-			         	</ul>
-		       		</li>
-		       		<li class="dropdown">
-			          	<a href="#l" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحات<span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="faq.html">سؤالات متداول</a></li>
-					        <li><a href="404.html">خطای 404</a></li>
-			         	</ul>
-		       		</li>
-		       		 <li class="dropdown">
-			          	<a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">وبلاگ<span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="blog.html">وبلاگ شبکه ای</a></li>
-			                <li><a href="blog_list.html">وبلاگ لیستی</a></li>
-			            	<li><a href="blog_single.html">ادامه مطلب وبلاگ</a></li>
-			         	</ul>
-		       		</li>
-		       		<li><a href="contact.html">تماس</a></li>
+                    <?php
+                    endforeach;
+                    ?>
 		      	</ul>
+                <?php endif; ?>
 		    </div>
 		</nav>
 	</div>
@@ -648,18 +642,22 @@
 					    </div>
 					</div>
 	     		</div>
+
 				<div class="col-md-8  pt-40">
 					<div class="features-heading skin2">
 						<h2 class="features-heading__title">آخرین محصولات</h2>
 					</div>
-					
 					<ul class="columns-4 text-center product-skin2">
+                        <?php
+                        $product=listProductDefault();
+                        foreach ($product as $value):
+                        ?>
 						<li class="item-product">
 							<div class="product-block">
 								<div class="product-image ">
 									<div class="product-thumbnail">
 										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_1.jpg" alt="">
+											<img class="product-featured-image" src="admin/<?php echo $value['img']?>" alt="">
 										</a>
 									</div>
 									<div class="product-actions">
@@ -676,255 +674,18 @@
 								</div>
 								<div class="product-meta">
 									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
+										<a href="product_single.html" title=""><?php echo $value['title']?></a>
 									</h4>
 									<div class="product-price">
 											<span class="amout">
-												<span class="money" data-currency-usd="7 ه ت">7 ه ت</span>
+												<span class="money" data-currency-usd="7 ه ت"><?php echo $value['productprice']?></span>
 											</span>
 											<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-										</div>
+                                    </div>
 								</div>
 							</div>
 						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_2.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-											<span class="amout">
-												<span class="money" data-currency-usd="6 ه ت">6 ه ت</span>
-											</span>
-											<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-										</div>
-								</div>
-							</div>
-						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_3.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-										<span class="amout">
-											<span class="money" data-currency-usd="12 ه ت">12 ه ت</span>
-										</span>
-										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_4.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-										<span class="amout">
-											<span class="money" data-currency-usd="4 ه ت">4 ه ت</span>
-										</span>
-										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_5.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-										<span class="amout">
-											<span class="money" data-currency-usd="15 ه ت">15 ه ت</span>
-										</span>
-										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_6.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-										<span class="amout">
-											<span class="money" data-currency-usd="8 ه ت">8 ه ت</span>
-										</span>
-										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_7.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-										<span class="amout">
-											<span class="money" data-currency-usd="16 ه ت">16 ه ت</span>
-										</span>
-										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="item-product">
-							<div class="product-block">
-								<div class="product-image ">
-									<div class="product-thumbnail">
-										<a href="product_single.html" title="">
-											<img class="product-featured-image" src="assets/images/product/product_8.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="product-actions">
-										<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
-										<i class="fa fa-heart-o"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
-										    <i class="fa fa-eye"></i>
-										</a>
-										<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
-										    <i class="fa fa-retweet"></i>
-										</a>
-									</div>
-								<div class="product-meta">
-									<h4 class="product-name">
-										<a href="product_single.html" title="">نوشیدنی انرژی زا ورزشی</a>
-									</h4>
-
-									<div class="product-price">
-										<span class="amout">
-											<span class="money" data-currency-usd="10 ه ت">10 ه ت</span>
-										</span>
-										<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
-									</div>
-								</div>
-							</div>
-						</li>
+                        <?php endforeach; ?>
 					</ul>
 				</div>
 			</div>

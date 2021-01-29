@@ -30,6 +30,7 @@
                                     <th>نام محصول</th>
                                     <th> دسته بندی محصول</th>
                                     <th> توضیحات</th>
+                                    <th> قیمت محصول</th>
                                     <th> تصویر محصول</th>
                                     <th>ویرایش</th>
                                     <th>حذف</th>
@@ -48,6 +49,7 @@
                                         ?>
                                     </td>
                                     <td><?php echo $val['text']; ?></td>
+                                    <td><?php echo $val['productprice']; ?></td>
                                     <td><img src="<?php echo $val['img']; ?>" width="60"></td>
                                     <td><a href="dashbord.php?m=product&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
                                     <td><a href="dashbord.php?m=product&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>

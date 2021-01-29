@@ -58,6 +58,10 @@
                         ?>
                     </select>
                   </div>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">قیمت محصول</label>
+                      <input type="text" class="form-control" name="frm[productprice]" placeholder="قیمت محصول را وارد کنید">
+                  </div>
                   <div class="form-group pt-4">
                       <div class="btn btn-default btn-file">
                           <i class="fa fa-paperclip"></i>اضافه کردن تصویر

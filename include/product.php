@@ -2,7 +2,7 @@
     function addProduct($data,$img)
     {
         $connection = config();
-        $sql = "INSERT INTO product_tbl (title,text,procat,img) VALUES ('$data[title]','$data[text]','$data[procat]','$img')";
+        $sql = "INSERT INTO product_tbl (title,text,procat,productprice,img) VALUES ('$data[title]','$data[text]','$data[procat]','$data[productprice]','$img')";
         mysqli_query($connection,$sql);
     }
 
@@ -81,33 +81,21 @@
 
         unlink($file);
 
-        $sql = "UPDATE product_tbl SET title='$data[title]',text='$data[text]',procat='$data[procat]',img='$pic' WHERE id='$id'";
+        $sql = "UPDATE product_tbl SET title='$data[title]',text='$data[text]',procat='$data[procat]',productprice='$data[productprice]',img='$pic' WHERE id='$id'";
         mysqli_query($connection, $sql);
     }
-//
-//    function listMenuDefault()
-//    {
-//        $connection = config();
-//        $sql = "SELECT * FROM product_tbl WHERE status='1' AND chid='0' ORDER BY sort ASC";
-//        $row = mysqli_query($connection, $sql);
-//        if (mysqli_num_rows($row) > 0) {
-//            while ($res = mysqli_fetch_assoc($row)) {
-//                $result[] = $res;
-//            }
-//            return $result;
-//        }
-//    }
-//
-//    function listSubMenuDefault($id)
-//    {
-//        $connection = config();
-//        $sql = "SELECT * FROM product_tbl WHERE status='1' AND chid='$id' ORDER BY sort ASC";
-//        $row = mysqli_query($connection, $sql);
-//        if (mysqli_num_rows($row) > 0) {
-//            while ($res = mysqli_fetch_assoc($row)) {
-//                $result[] = $res;
-//            }
-//            return $result;
-//        }
-//    }
+
+    function listProductDefault()
+    {
+        $connection = config();
+        $sql = "SELECT * FROM product_tbl";
+        $row = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($row) > 0) {
+            while ($res = mysqli_fetch_assoc($row)) {
+                $result[] = $res;
+            }
+            return $result;
+        }
+    }
+
 
