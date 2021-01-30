@@ -44,15 +44,15 @@ function deleteContact($id)
     mysqli_query($connection,$sql);
 }
 
-//function showEditNews($id)
-//{
-//    $connection = config();
-//    $sql = "SELECT * FROM news_tbl WHERE id='$id'";
-//    $row = mysqli_query($connection, $sql);
-//    $res = mysqli_fetch_assoc($row);
-//    return $res;
-//}
-//
+function showDetailContact($id)
+{
+    $connection = config();
+    $sql = "SELECT * FROM contact_tbl WHERE id='$id'";
+    $row = mysqli_query($connection, $sql);
+    $res = mysqli_fetch_assoc($row);
+    return $res;
+}
+
 //function editNews($data,$id,$img,$oldPic)
 //{
 //    if($_FILES[$img]['name']!=''){

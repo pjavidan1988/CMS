@@ -31,8 +31,8 @@
                                     <th> نام خانوادگی</th>
                                     <th> ایمیل</th>
                                     <th> موضوع</th>
-                                    <th> متن تماس</th>
                                     <th> تلفن</th>
+                                    <th> نمایش</th>
                                     <th>حذف</th>
                                 </tr>
                                 </thead>
@@ -46,8 +46,8 @@
                                     <td><?php echo $val['lastname']; ?></td>
                                     <td><?php echo $val['email']; ?></td>
                                     <td><?php echo $val['subject']; ?></td>
-                                    <td><?php echo $val['text']; ?></td>
                                     <td><?php echo $val['phone']; ?></td>
+                                    <td><a href="dashbord.php?m=contact&p=detail&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i></a></td>
                                     <td><a href="dashbord.php?m=contact&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
                                 </tr>
                                 <?php
