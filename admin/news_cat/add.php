@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['btn'])){
        $data=$_POST['frm'];
-       addProductCat($data);
+       addNewsCat($data);
     }
 
 ?>
@@ -39,22 +39,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">عنوان دسته بندی</label>
-                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان دسته بندی را وارد کنید">
-                  </div>
-                  <div class="form-group">
-                      <label for="exampleInputPassword1">ترتیب نمایش</label>
-                      <input type="text" class="form-control" name="frm[sort]" placeholder="ترتیب نمایش">
-                  </div>
-                  <label>وضعیت</label>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="frm[status]" value="1">  فعال
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="frm[status]" value="0" checked>  غیر فعال
-                    </label>
+                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان خبر را وارد کنید">
                   </div>
                 </div>
                 <!-- /.card-body -->

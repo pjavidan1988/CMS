@@ -1,3 +1,6 @@
+<?php
+include_once 'include/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +44,7 @@
 			        	<div class="top-bar-register">
 				            <a class="top-bar__item" href="account.html">
 				            	<i class="fa fa-user-o" aria-hidden="true"></i>
-				            	ثبت نام
+				            	 ثبت نام
 				            </a>
 				        </div>
 			            <div class="top-bar-account">
@@ -123,48 +126,34 @@
 					<!--  Main navigation  -->
 
 					<div class="otf-flex-item"></div>
-					
+                    <?php
+                    $row=listMenuDefault();
+                    if($row):
+                    ?>
 					<ul class="main-nav nav navbar-nav navbar-right">
-						<li class="dropdown active">
-							<a href="index.html">صفحه اصلی</a>
+                        <?php
+                        foreach ($row as $val):
+                        ?>
+						<li class="dropdown">
+							<a href="<?php echo $val['url']; ?>"><?php echo $val['title']; ?></a>
+                            <?php
+                            $rows=listSubMenuDefault($val['id']);
+                            if($rows):
+                            ?>
 							<ul class="dropdown-menu">
-				            	<li><a href="../index.html">صفحه اصلی 1</a></li>
-					            <li><a href="../v2/index.html">صفحه اصلی 2</a></li>
+                                <?php
+                                foreach ($rows as $value):
+                                ?>
+				            	<li><a href="<?php echo $value['url']; ?>"><?php echo $value['title']; ?></a></li>
+                                <?php endforeach; ?>
 			            	</ul>
+                            <?php endif; ?>
 						</li>
-			         	<li class="dropdown">
-			         		<a href="#">محصولات</a>
-			         		<ul class="dropdown-menu">
-				            	<li><a href="product_grid.html">
-				            	محصولات شبکه ای</a>
-				            	</li>
-				            	<li><a href="product_list.html">محصولات لیستی</a></li>
-				                <li><a href="product_sidebar.html">محصولات با سایدبار</a></li>
-				                
-				            	<li><a href="product_single.html">ادامه مطلب محصول</a></li>
-			            	</ul>
-			         	</li>
-			           	<li class="dropdown"><a href="about.html">درباره</a></li>
-			            <li class="dropdown">
-			            	<a href="#">صفحات</a>
-			            	<ul class="dropdown-menu">
-				            	<li><a href="faq.html">سؤالات متداول</a>
-				            	</li>
-				                <li><a href="contact.php">تماس</a></li>
-				            	<li><a href="404.html">خطای 404</a></li>
-			            	</ul>
-			            </li>
-			            <li class="dropdown">
-			            	<a href="#">وبلاگ</a>
-			            	<ul class="dropdown-menu">
-				            	<li><a href="blog.html">وبلاگ شبکه ای</a>
-				            	</li>
-				                <li><a href="blog_list.html">وبلاگ لیستی</a></li>
-				            	<li><a href="blog_single.html">ادامه مطلب وبلاگ</a></li>
-			            	</ul>
-			            </li>
-			            <li><a href="contact.php">تماس</a></li>
+                        <?php
+                        endforeach;
+                        ?>
 					</ul>
+                    <?php endif; ?>
 					<!-- /Main navigation -->
 					<div class="otf-flex-item"></div>
 					<div class="site-header -icon">
@@ -338,40 +327,34 @@
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <?php
+                $row=listMenuDefault();
+                if($row):
+                ?>
 		      	<ul class="nav navbar-nav">
+                    <?php
+                    foreach ($row as $val):
+                    ?>
 			        <li class="active dropdown">
-			          	<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه اصلی <span class="caret"></span></a>
+			          	<a href="<?php echo $val['url']; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $val['title']; ?><span class="caret"></span></a>
+                        <?php
+                        $rows=listSubMenuDefault($val['id']);
+                        if($rows):
+                        ?>
 			          	<ul class="dropdown-menu">
-				          	<li><a href="../index.html">صفحه اصلی 1</a></li>
-					        <li><a href="../v2/index.html">صفحه اصلی 2</a></li>
+                            <?php
+                            foreach ($rows as $value):
+                            ?>
+				          	<li><a href="<?php echo $value['url']; ?>"><?php echo $value['title']; ?></a></li>
+                            <?php endforeach; ?>
 			         	</ul>
+                        <?php endif; ?>
 		       		</li>
-			        <li class="dropdown">
-			          	<a href="product_grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pمحصولات <span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				          	<li><a href="product_grid.html">محصولات شبکه ای</a></li>
-			            	<li><a href="product_list.html">محصولات لیستی</a></li>
-			                <li><a href="product_sidebar.html">محصولات با سایدبار</a></li>
-			            	<li><a href="product_single.html">ادامه مطلب محصول</a></li>
-			         	</ul>
-		       		</li>
-		       		<li class="dropdown">
-			          	<a href="#l" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحات<span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="faq.html">سؤالات متداول</a></li>
-					        <li><a href="404.html">خطای 404</a></li>
-			         	</ul>
-		       		</li>
-		       		 <li class="dropdown">
-			          	<a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">وبلاگ<span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="blog.html">وبلاگ شبکه ای</a></li>
-			                <li><a href="blog_list.html">وبلاگ لیستی</a></li>
-			            	<li><a href="blog_single.html">ادامه مطلب وبلاگ</a></li>
-			         	</ul>
-		       		</li>
-		       		<li><a href="contact.php">تماس</a></li>
+                    <?php
+                    endforeach;
+                    ?>
 		      	</ul>
+                <?php endif; ?>
 		    </div>
 		</nav>
 	</div>
@@ -395,18 +378,16 @@
 	<!-- End header ====
     	======================================= -->
 
-
-
 	
-    <!-- =====================================
+	<!-- =====================================
     	==== Start breadcrumb -->
    	<div class="breadcrumb">
    		<!-- container -->
 		<div class="container">
-			<h1>وبلاگ لیستی</h1>
+			<h1>محصولات</h1>
 			<ol class="item-breadcrumb">
 	            <li><a href="index.html">صفحه اصلی</a></li>
-	            <li>وبلاگ لیستی</li>     
+	            <li>دسته 1</li>     
             </ol>
 		</div>
 		<!-- /container -->
@@ -414,236 +395,192 @@
     <!-- =====================================
     	==== End breadcrumb -->
 
+
 	<!-- =====================================
-    	==== Start blog-list -->
-	<div class="blog">
-		<!-- container -->
+    	====Start archive-product -->
+	<div class="archive-product">
+		<!-- Container -->
 		<div class="container">
-			<!-- Row -->
-			<div class="row">
-				<div class="col-md-9">
-					<div class="blog-list">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog1.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
+			<!-- product-shorting -->
+			<div class="product-shorting d-flex align-items-center justify-content-between">
+				<div class="grid-list-view">
+                    <ul class="nav tabs-area">
+                        <li class="active">
+                        	<a data-toggle="tab" href="#grid-view">
+                            	<i class="fa fa-th"></i>
+                            </a>
+                        </li>
+                        <li>
+                        	<a data-toggle="tab" href="#list-view" class="">
+                        		<i class="fa fa-list-ul"></i>
+                        	</a>
+                        </li>
+                    </ul>
+                    <span class="show-items">نمایش 1 تا 9</span>
+                </div>
+                <div class="toolbar-sorter">
+                    <select name="orderby" class="orderby">
+						<option value="menu_order" selected="selected">مرتب سازی پیش فرض</option>
+						<option value="popularity">مرتب سازی براساس محبوبیت</option>
+						<option value="rating">مرتب سازی براساس میانگین نمره</option>
+						<option value="date">میانگین بر اساس جدیدترین</option>
+						<option value="price">مرتب سازی براساس قیمت صعودی</option>
+						<option value="price-desc">مرتب سازی براساس قیمت نزولی</option>
+					</select>
+                </div>
+            </div>
+            <!--/product-shorting -->
 
-					<div class="blog-list">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog9.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
 
-					<div class="blog-list">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog2.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
+            <!-- tab-content -->
+            <div class="tab-content">
+            	<div id="grid-view" class="tab-pane fade in active">
+					<div class="product products-grid">
+						<div class="row row-products">
+                            <?php
+                            $product=listProductDefault();
+                            foreach ($product as $value):
+                            ?>
+				 			<div class="col-md-4 col-sm-6">
+				 				<div class="product-block" data-publish-date="">
+									<div class="product-image product_1">
+										<div class="product-thumbnail">
+											<a href="product_single.html" title="">
+												<img class="product-featured-image" src="admin/<?php echo $value['img']?>" alt="">
+											</a>
+										</div>
+										<div class="product-actions">
+											<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+											<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+											    <i class="fa fa-eye"></i>
+											</a>
+											<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+											    <i class="fa fa-retweet"></i>
+											</a>
+										</div>
+									</div><!-- /.product-image -->
+									<div class="product-meta">
+										<span class="product-rating" data-rating="">
+											<span class="star-rating">
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+											</span>
+										</span>
+										<!-- end rating -->
+										<h4 class="product-name">
+											<a href="product_single.html" title="">
+                                                <?php echo $value['title']?>
+											</a>
+										</h4>
+										<div class="product-price">
+											<span class="amout">
+												<span class="money" data-currency-usd="$700.00"><?php echo $value['productprice']?></span>
+											</span>
+											<a href="product_single.html" class="add_to_cart_button">اضافه به سبد خرید</a>
+										</div>
+									</div><!-- /.product-meta -->
 								</div>
-							</div>
-						</article>
-					</div>
-
-					<div class="blog-list">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog3.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="blog-list">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog4.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="blog-list">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog5.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
-				  	<!-- pagination -->
-					<nav class="pagination clearfix">
-						<ul class="page-numbers">
-							<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-right " aria-hidden="true"></i></a></li>
-							<li><span class="page-numbers current">1</span></li>
-							<li><a class="page-numbers" href="#">2</a></li>
-							<li><a class="page-numbers" href="#">3</a></li>
-							<li><a class="next page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-						</ul>
-					</nav>
-					<!-- /pagination -->
+				 			</div>
+                            <?php endforeach; ?>
+				 		</div>
+				 	</div>
 				</div>
+				<div id="list-view" class="tab-pane fade">
+				 	<div class="product products-list">
+						<div class="row row-products">
+                            <?php
+                            $product=listProductDefault();
+                            foreach ($product as $value):
+                            ?>
+				 			<div class="col-md-12">
+				 				<div class="product-block">
+				 					<div class="row">
+					 					<div class="col-md-4 col-lg-4 col-sm-4">
+					 						<div class="product-image product_1">
+												<div class="product-thumbnail">
+													<a href="#" title="">
+														<img class="product-featured-image" src="admin/<?php echo $value['img']?>" alt="">
+													</a>
+												</div>
+											</div><!-- /.product-image -->
+						 			    </div>
+						 				<div class="col-md-8 col-lg-8 col-sm-8">
+											<div class="product-meta">
+												<span class="product-rating" data-rating="">
+													<span class="star-rating">
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</span>
+												</span>
+												<!-- end rating -->
+												<h4 class="product-name">
+													<a href="product_single.html" title="">
+                                                        <?php echo $value['title']?>
+													</a>
+												</h4><!-- /.product-product -->
 
-				<div class="col-md-3">
-					<aside class="sidebar">
-						<!-- Categories -->
-						<section class="widget section-categories">
-							<h3 class="widget-title">دسته بندی های وبلاگ</h3>
-							<div class="widget-content">
-								<ul class="list-categories list-widget">
-									<li class="list-widget__item">
-										<a class="list-widget__link active" href="#">همه محصولات</a>
-									</li>
-									<li class="list-widget__item">
-										<a class="list-widget__link" href="#">کوه نوردی</a>
-									</li>
-									<li class="list-widget__item">
-										<a class="list-widget__link" href="#">مسافرت و جهانگردی</a>
-									</li>
-									<li class="list-widget__item">
-										<a class="list-widget__link" href="#">ورزش های زمستانی</a>
-									</li>
-									<li class="list-widget__item">
-										<a class="list-widget__link" href="#">ایران گردی</a>
-									</li>
-								</ul>
-							</div>
-						</section>
-						<!-- /Categories -->
-
-						<!-- Related Posts -->
-						<section class="widget section-related-posts">
-							<h3 class="widget-title">پست های مرتیط</h3>
-							<div class="widget-content">
-								<ul class="list-posts">
-									<li class="post-widget">
-										<span class="post-date">28 فروردین 1398</span>
-										<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-									</li>
-									<li class="post-widget">
-										<span class="post-date">28 فروردین 1398</span>
-										<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-									</li>
-									<li class="post-widget">
-										<span class="post-date">28 فروردین 1398</span>
-										<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-									</li>
-									<li class="post-widget">
-										<span class="post-date">28 فروردین 1398</span>
-										<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-									</li>
-
-								</ul>
-							</div>
-						</section>
-						<!-- /Related Posts -->
-
-						<!-- instagram -->
-						<section class="widget section-instagram">
-							<h3 class="widget-title">ما را در اینستاگرام دنبال کنید</h3>
-							<div class="widget-content instagramm-feed">
-								<a href="#"><img src="assets/images/blog/blog1.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog2.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog3.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog4.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog5.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog6.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog7.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog8.jpg" alt=""></a>
-								<a href="#"><img src="assets/images/blog/blog9.jpg" alt=""></a>
-							</div>
-						</section>
-						<!-- /instagram -->
-
-						<!-- tag -->
-						<section class="widget section-tags">
-							<h3 class="widget-title">برچسب ها</h3>
-							<div class="widget-content">
-								<div class="tagcloud">
-									<a href="" class="tag-cloud-link">صورت</a>
-									<a href="" class="tag-cloud-link">پوست</a>
-									<a href="" class="tag-cloud-link">چین و چروک</a>
-									<a href="" class="tag-cloud-link">سیب</a>
-									<a href="" class="tag-cloud-link">مد روز</a>
-									<a href="" class="tag-cloud-link">مراقبت از مو</a>
+												<div class="product-price">
+													<span class="amout">
+														<span class="money" data-currency-usd="$700.0"><?php echo $value['productprice']?></span>
+													</span>
+												</div><!-- /.product-price -->
+												<div class="excerpt">
+                                                    <?php echo $value['text']?>
+							                    </div>
+							                    <div class="product-footer">
+													<a href="cart.html" class="btn btn-primary">اضافه به سبد خرید<i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+													<div class="product-actions">
+														<a href="#" data-id="" class="btn wishlist product-quick-whistlist" title="اضافه به لیست مورد علاقه">
+														<i class="fa fa-heart-o"></i>
+														</a>
+														<a href="" data-id="" class="btn product-quick-view btn-quickview" title="نگاه سریع">
+														    <i class="fa fa-eye"></i>
+														</a>
+														<a href="" data-id="" class="btn product-quick-compare btn-compare" title="مقایسه">
+														    <i class="fa fa-retweet"></i>
+														</a>
+													</div>
+												</div>
+											</div><!-- /.product-meta -->
+										</div>
+									</div>
 								</div>
-							</div>
-						</section>
-						<!-- /tag -->
-					</aside>
+				 			</div>
+                            <?php endforeach; ?>
+				 		</div>
+			 		</div>
 				</div>
 			</div>
-			<!-- /Row -->
-		</div>
-		<!-- /container -->
+			<!-- /tab-content -->
+			
+			<!-- pagination -->
+			<nav class="pagination clearfix">
+				<ul class="page-numbers">
+					<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-right " aria-hidden="true"></i></a></li>
+					<li><span class="page-numbers current">1</span></li>
+					<li><a class="page-numbers" href="#">2</a></li>
+					<li><a class="page-numbers" href="#">3</a></li>
+					<li><a class="page-numbers" href="#">4</a></li>
+					<li><a class="page-numbers" href="#">5</a></li>
+					<li><a class="next page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+				</ul>
+			</nav>
+			<!-- /pagination -->
+	 	</div>
 	</div>
 	<!-- =====================================
-    	==== End blog-list -->
+    	====End archive-product -->
+	
 
-    	
-	<!-- =====================================================================
+ 	<!-- =====================================================================
     	==== Start footer -->
    	<footer class="site-footer site-footer-2 clearfix">
     	<div class="site-footer__main">

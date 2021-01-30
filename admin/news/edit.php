@@ -1,14 +1,14 @@
 <?php
 ob_start();
 $id=$_GET['id'];
-$result=showEditProduct($id);
+$result=showEditNews($id);
 
 
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
     $oldPic=$result['img'];
-    editProduct($data,$id,'img',$oldPic);
-    header("location:dashbord.php?m=product&p=list");
+    editNews($data,$id,'img',$oldPic);
+    header("location:dashbord.php?m=news&p=list");
 }
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -36,38 +36,45 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title"> ویرایش محصول :  <?php echo $result['title']; ?></h3>
+                            <h3 class="card-title"> ویرایش خبر :  <?php echo $result['title']; ?></h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form role="form" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان محصول</label>
+                                    <label for="exampleInputEmail1">عنوان خبر</label>
                                     <input type="text" class="form-control" name="frm[title]" value="<?php echo $result['title'];?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">توضیحات</label>
+                                    <label> تاریخ :</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                        <input type="date" name="frm[date]" class="form-control ltr" value="<?php echo $result['date'];?>">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">متن خبر</label>
                                     <textarea type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>دسته بندی</label>
-                                    <select class="form-control" name="frm[procat]">
+                                    <select class="form-control" name="frm[news_cat]">
                                         <?php
-                                        $proCat=proCat();
-                                        foreach ($proCat as $val){
+                                        $newsCat=newsCat();
+                                        foreach ($newsCat as $val){
                                             echo "<option value=\"$val[id]\" ";
-                                                if($result['procat']==$val['id']){
+                                                if($result['news_cat']==$val['id']){
                                                     echo " selected";
                                                 }
                                             echo ">$val[title] </option>";
                                         }
                                         ?>
                                     </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان محصول</label>
-                                    <input type="text" class="form-control" name="frm[productprice]" value="<?php echo $result['productprice'];?>">
                                 </div>
                                 <div class="form-group pt-4">
                                     <div class="btn btn-default btn-file">

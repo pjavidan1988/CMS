@@ -74,13 +74,6 @@
             $pic=$oldPic;
         }
         $connection = config();
-        $sql1="SELECT * FROM product_tbl WHERE id='$id'";
-        $result=mysqli_query($connection,$sql1);
-        $row=mysqli_fetch_assoc($result);
-        $file=$row['img'];
-
-        unlink($file);
-
         $sql = "UPDATE product_tbl SET title='$data[title]',text='$data[text]',procat='$data[procat]',productprice='$data[productprice]',img='$pic' WHERE id='$id'";
         mysqli_query($connection, $sql);
     }

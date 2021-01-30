@@ -37,4 +37,8 @@ switch ($m){
         include_once 'product_cat.php';
     case 'product':
         include_once 'product.php';
+    case 'news':
+        include_once 'news.php';
+    case 'news_cat':
+        include_once 'news_cat.php';
 }

@@ -41,6 +41,7 @@ $activePage = "dashbord.php?m=menu&p=list";
   <link rel="stylesheet" href="dist/css/bootstrap-rtl.min.css">
   <!-- template rtl version -->
   <link rel="stylesheet" href="dist/css/custom-style.css">
+
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -268,6 +269,52 @@ $activePage = "dashbord.php?m=menu&p=list";
                             <a href="dashbord.php?m=product&p=add" class="nav-link active">
                                 <i class="fa fa-plus-square-o nav-icon"></i>
                                 <p>افزودن محصول جدید</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-file-text"></i>
+                        <p>
+                            دسته بندی اخبار
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=news_cat&p=list" class="nav-link active">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>لیست دسته بندی ها </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=news_cat&p=add" class="nav-link active">
+                                <i class="fa fa-plus-square-o nav-icon"></i>
+                                <p>افزودن دسته بندی جدید</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-newspaper-o"></i>
+                        <p>
+                            مدیریت اخبار
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=news&p=list" class="nav-link active">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>لیست دسته بندی ها </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=news&p=add" class="nav-link active">
+                                <i class="fa fa-plus-square-o nav-icon"></i>
+                                <p>افزودن خبر جدید</p>
                             </a>
                         </li>
                     </ul>

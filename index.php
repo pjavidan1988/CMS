@@ -850,20 +850,26 @@
 			</div>
 
 	     	<div class="row">
+
+                <?php
+                    $news=listNewsDefault();
+                    foreach ($news as $value):
+                ?>
 		     	<div class="col-md-4 col-sm-4">
 					<div class="blog-grid">
 						<article class="post">
 							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog1.jpg" alt="">
+								<img class="img-responsive" src="admin/<?php echo $value['img']?>" alt="">
 							</div>
 							<div class="blog-content">
 								
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+								<span class="post-date"><i class="fa fa-calendar"></i>  <?php echo $value['date']?>  </span>
+								<h3 class="post-title"><a href="#"><?php echo $value['title'];?></a></h3>
+								<p>
+                                    <?php echo $value['text'];?>
 								</p>
 								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
+									<span class="author"> توسط <a href="#">علی عمادزاده</a></span>
 									<span class="comment"><a href="#">0</a>نظرات</span>
 									<span class="like">
 										<i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -873,52 +879,9 @@
 						</article>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="blog-grid">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog2.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
-								</p>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="blog-grid">
-						<article class="post">
-							<div class="blog-img">
-								<img class="img-responsive" src="assets/images/blog/blog3.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								
-								<span class="post-date">28 فروردین 1398</span>
-								<h3 class="post-title"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h3>
-								<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
-								</p>
-								<div class="entry-meta">
-									<span class="author">توسط<a href="#">علی عمادزاده</a></span>
-									<span class="comment"><a href="#">0</a>نظرات</span>
-									<span class="like">
-										<i class="fa fa-heart-o" aria-hidden="true"></i>
-										پسندیدن<a href="#"> 2 </a></span>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
+                <?php
+                    endforeach;
+                ?>
 			</div>
 	     </div>
 	 </div>
@@ -943,7 +906,7 @@
 		    			<h3 class="widget-title">لینک های مفید</h3>
 		    			<ul>
 		    				<li><a href="about.html">درباره ما</a></li>
-		    				<li><a href="contact.html">تماس با ما</a></li>
+		    				<li><a href="contact.php">تماس با ما</a></li>
 		    				<li><a href="blog.html">اخبار</a></li>
 		    				<li><a href="account.html">حساب من</a></li>
 		    				<li><a href="faq.html">سؤالات متداول</a></li>
