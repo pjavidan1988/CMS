@@ -41,4 +41,6 @@ switch ($m){
         include_once 'news.php';
     case 'news_cat':
         include_once 'news_cat.php';
+    case 'contact':
+        include_once 'contact.php';
 }

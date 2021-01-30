@@ -1,399 +1,388 @@
+<?php
+include_once 'include/functions.php';
+    if(isset($_POST['btn'])){
+        include_once 'include/contact.php';
+        $data=$_POST['frm'];
+        addContact($data);
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>قالب HTML انرکاس</title>
+    <title>قالب HTML انرکاس</title>
 
-	<!-- preloader CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/preloader.css"> 
-	<!-- slider-pro CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/slider-pro.css">
-	<!-- slick CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <!-- preloader CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/preloader.css">
+    <!-- slider-pro CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slider-pro.css">
+    <!-- slick CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 
-	<!-- Main Style CSS CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	
+    <!-- Main Style CSS CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <!-- font-awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-	<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 
-	 <!-- Fonts --> 
-	<link href='https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
-		<!-- =====================================
-    	==== Start header -->
+<!-- =====================================
+==== Start header -->
 
-	<!-- Header desktop -->
-	<header class="header section-bg" style="background-image:url(assets/images/bg_header.jpg)">
-		<!-- top-bar -->
-		<div class="topbar">
-			<div class="container">
-				<div class="top-bar">
-			        <div class="top-bar__left pull">
-			        	<div class="top-bar-register">
-				            <a class="top-bar__item" href="account.html">
-				            	<i class="fa fa-user-o" aria-hidden="true"></i>
-				            	ثبت نام
-				            </a>
-				        </div>
-			            <div class="top-bar-account">
-				            <a class="top-bar__item" href="account.html">
-				            	<i class="fa fa-lock" aria-hidden="true"></i>
-				            	ورود
-				            </a>
-			            	<div class="content-dropdown left">
-								<div class="account-inner ">
-								    <div class="login-form-head">
-								      	<span class="login-form-title">ورود به حساب</span>
-						      	<span class="pull-left">
+<!-- Header desktop -->
+<header class="header section-bg" style="background-image:url(assets/images/bg_header.jpg)">
+    <!-- top-bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="top-bar">
+                <div class="top-bar__left pull">
+                    <div class="top-bar-register">
+                        <a class="top-bar__item" href="account.html">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                            ثبت نام
+                        </a>
+                    </div>
+                    <div class="top-bar-account">
+                        <a class="top-bar__item" href="account.html">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            ورود
+                        </a>
+                        <div class="content-dropdown left">
+                            <div class="account-inner ">
+                                <div class="login-form-head">
+                                    <span class="login-form-title">ورود به حساب</span>
+                                    <span class="pull-left">
 								     	 	<a class="register-link" href="#" title="Register">ایجاد حساب کاربری</a>
 								     	 </span>
-								    </div>
-								    <form class="opal-login-form-ajax" data-toggle="validator" role="form">
-								        <p>
-								        <label>نام کاربری یا ایمیل<span class="required">*</span></label>
-								        <input name="username" type="text" required="" placeholder="نام کاربری">
-								        </p>
-								        <p>
-								        <label>رمز عبور <span class="required">*</span></label>
-								        <input name="password" type="password" required="" placeholder="رمز عبور">
-								        </p>
-								        <button type="submit" data-button-action="" class="btn btn-primary btn-block">ورود</button>
-								       	<input type="hidden" name="action" value="">
-								        <input type="hidden" id="security-login" name="security-login" value="">
-								        <input type="hidden" name="login" value="">
-								    </form>
-								    <div class="login-form-bottom">
-								      		<a href="#" class="lostpass-link" title="رمز عبور خود را فراموش کرده اید؟">رمز عبور خود را فراموش کرده اید؟</a>
-								    </div>          
-								</div>
-							</div>     
-			        	</div>
-			        </div>
-			        <div class="top-bar__right">
-			        	<div class="header-language item-dropdown">
-							<a href="#" class="top-bar__item">انگلیسی
-								<i class="fa fa-angle-down"></i>
-							</a>
-							<ul class="content-dropdown">
-								<li class="active"><a href="#">انگلیسی</a></li>
-								<li><a href="#">فرانسوی</a></li>
-								<li><a href="#">عربی</a></li>
-							</ul>
-						</div>
-						<div class="header-currency item-dropdown">
-							<a href="#" class="top-bar__item">دلار آمریکا
-								<i class="fa fa-angle-down"></i>
-							</a>
-							<ul class="content-dropdown">
-								<li><a href="#"><span class="symbol">€</span>یورو</a></li>
-								<li class="active"><a href="#"><span class="symbol">$</span>دلار آمریکا</a></li>
-								<li><a href="#"><span class="symbol">£</span>GBP</a></li>
-							</ul>
-						</div>
-		        	</div>
-		        </div>
-			</div>
-			<!-- /Container -->
-	    </div>
-	    <!-- /top-bar -->
-
-	    <!-- header-main -->
-	    <div class="header-main pb-30">
-	    	<div class="container">
-			    <nav id="nav" class="navbar">
-			    	<div class="nav-collapse">
-						<span></span>
-					</div>
-					<div class="navbar-header">
-						<!-- Logo -->
-						<div class="navbar-brand">
-							<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a> 
-						</div>
-						<!-- /Logo -->
-					</div>
-					<!--  Main navigation  -->
-
-					<div class="otf-flex-item"></div>
-					
-					<ul class="main-nav nav navbar-nav navbar-right">
-						<li class="dropdown active">
-							<a href="index.html">صفحه اصلی</a>
-							<ul class="dropdown-menu">
-				            	<li><a href="../index.html">صفحه اصلی 1</a></li>
-					            <li><a href="../v2/index.html">صفحه اصلی 2</a></li>
-			            	</ul>
-						</li>
-			         	<li class="dropdown">
-			         		<a href="#">محصولات</a>
-			         		<ul class="dropdown-menu">
-				            	<li><a href="product_grid.html">
-				            	محصولات شبکه ای</a>
-				            	</li>
-				            	<li><a href="product_list.html">محصولات لیستی</a></li>
-				                <li><a href="product_sidebar.html">محصولات با سایدبار</a></li>
-				                
-				            	<li><a href="product_single.html">ادامه مطلب محصول</a></li>
-			            	</ul>
-			         	</li>
-			           	<li class="dropdown"><a href="about.html">درباره</a></li>
-			            <li class="dropdown">
-			            	<a href="#">صفحات</a>
-			            	<ul class="dropdown-menu">
-				            	<li><a href="faq.html">سؤالات متداول</a>
-				            	</li>
-				                <li><a href="contact.php">تماس</a></li>
-				            	<li><a href="404.html">خطای 404</a></li>
-			            	</ul>
-			            </li>
-			            <li class="dropdown">
-			            	<a href="#">وبلاگ</a>
-			            	<ul class="dropdown-menu">
-				            	<li><a href="blog.html">وبلاگ شبکه ای</a>
-				            	</li>
-				                <li><a href="blog_list.html">وبلاگ لیستی</a></li>
-				            	<li><a href="blog_single.html">ادامه مطلب وبلاگ</a></li>
-			            	</ul>
-			            </li>
-			            <li><a href="contact.php">تماس</a></li>
-					</ul>
-					<!-- /Main navigation -->
-					<div class="otf-flex-item"></div>
-					<div class="site-header -icon">
-						<!-- search -->
-							<div class="site-header__search">
-				            <div class="ps-search-btn">
-				              	<i class="fa fa-search" aria-hidden="true"></i>
-				            </div>
-				            <div class="ps-search">
-						     <div class="ps-search__content">
-						     	<a class="ps-search__close" href="#"><span></span></a>
-						     	<h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
-						        <form method="get" class="searchform" action="#">
-									<div class="wiget-search input-group">
-									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . ."> 
-
-									 <span class="input-group-addon input-large btn-search"> 
-									 	<span class="fa fa-search"></span>
-										<input type="submit" class="fa" value=""> 
-									 </span>
-									</div>
-								</form>
-						      </div>
-						    </div>
-						</div>
-							<!-- cart -->
-				      	<div class="site-header__cart item-dropdown">
-					        <a href="cart.html" class="site-header__cart-toggle">
-					          	<span class="cartcount">3</span>
-					           	<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-					            <span class="cartcost"><span class="money" data-currency-usd="0 ه ت ">0 ه ت </span></span>
-					        </a>
-					        <div class="widget_shopping_cart_content  content-dropdown">
-								 <div class="cart_list ">
-								    <div class="media widget-product">
-								      <div class="media-left">
-									      <a href="product_single.html" class="image pull-left">
-										      <img src="assets/images/product/product_1.jpg" alt=""> 
-										  </a>
-								      </div>
-								      <div class="cart-main-content media-body">
-									      	<h3 class="name">
-										      <a href="product_single.html">
-										      	Reebok Strength Gloves
-										      </a>
-									      	</h3>
-									     	 <p class="cart-item">
-									      		<span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>  
-									      	 </p>
-									      <a href="#" class="remove" title="Remove this item">×</a>
-								      </div>
-								    </div>
-								    <div class="media widget-product">
-								      <div class="media-left">
-									      <a href="product_single.html" class="image pull-left">
-										      <img src="assets/images/product/product_2.jpg" alt=""> 
-										  </a>
-								      </div>
-								      <div class="cart-main-content media-body">
-									      <h3 class="name">
-										      <a href="product_single.html">
-										      	نوشیدنی انرژی زا ورزشی
-										      </a>
-									      </h3>
-									      <p class="cart-item">
-									      <span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>           </p>
-									      <a href="#" class="remove" title="Remove this item">×</a>
-								      </div>
-								    </div>
-								     <div class="media widget-product">
-								      <div class="media-left">
-									      <a href="product_single.html" class="image pull-left">
-										      <img src="assets/images/product/product_3.jpg" alt=""> 
-										  </a>
-								      </div>
-								      <div class="cart-main-content media-body">
-									      <h3 class="name">
-										      <a href="product_single.html">
-										      	Bodymax contest weight
-										      </a>
-									      </h3>
-									      <p class="cart-item">
-									      <span class="quantity">2 × <span class="price-amount amount">200<span class="price-currencySymbol"> ه ت </span></span></span>           </p>
-									      <a href="#" class="remove" title="Remove this item">×</a>
-								      </div>
-								    </div>
-								 </div>
-								  <p class="total"><strong>جمع کل:</strong>
-								     <span class="price-amount amount">
-								    <span class="price-currencySymbol"> ه ت </span>700</span>
-								  </p>
-								  <p class="buttons clearfix">
-								  <a href="cart.html" class="btn view-cart btn-default btn-normal pull-right">مشاهده سبد خرید</a>
-								  <a href="#" class="btn check-out btn-primary btn-normal pull-left">پرداخت</a>
-							 	 </p>
-							</div>
-				        </div>
-			        </div>
-				</nav>
-	    	</div>
-	    </div>
-	    <!-- /header-main -->
-	</header>
-	<!-- /Headerdesktop -->
-
-	<!-- header-mobile -->
-	<div class="header-mobile section-bg" style="background-image:url(assets/images/bg_header.jpg)">
-		<div class="header-mobile-top">
-	        <div class="top-bar">
-				<div class="header-language item-dropdown">
-					<a href="#" class="top-bar__item">انگلیسی
-						<i class="fa fa-angle-down"></i>
-					</a>
-					<ul class="content-dropdown">
-						<li class="active"><a href="#">انگلیسی</a></li>
-						<li><a href="#">فرانسوی</a></li>
-						<li><a href="#">عربی</a></li>
-					</ul>
-				</div>
-				<div class="header-currency item-dropdown">
-					<a href="#" class="top-bar__item">دلار آمریکا
-						<i class="fa fa-angle-down"></i>
-					</a>
-					<ul class="content-dropdown">
-						<li><a href="#"><span class="symbol">€</span>یورو</a></li>
-						<li class="active"><a href="#"><span class="symbol">$</span>دلار آمریکا</a></li>
-						<li><a href="#"><span class="symbol">£</span>GBP</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="site-header -icon">
-				<!-- search -->
-					<div class="site-header__search">
-			            <div class="ps-search-btn">
-			              	 <i class="fa fa-search" aria-hidden="true"></i>
-			            </div>
-			            <div class="ps-search">
-						    <div class="ps-search__content">
-						     	<a class="ps-search__close" href="#"><span></span></a>
-						     	<h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
-						        <form method="get" class="searchform" action="#">
-									<div class="wiget-search input-group">
-									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . ."> 
-
-									 <span class="input-group-addon input-large btn-search"> 
-									 	<span class="fa fa-search"></span>
-									 	<input type="submit" class="fa" value=""> 
-									 </span>
-									</div>
-								</form>
-						    </div>
-					    </div>
-					</div>
-				<!--end search -->
-		    </div>
-	    </div>
-		
-		<nav class="navbar">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <!-- logo -->
-		      <div class="navbar-brand">
-		      	<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""> </a> 
-		      </div>
-		      <!-- logo -->
-		    </div>
-
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      	<ul class="nav navbar-nav">
-			        <li class="active dropdown">
-			          	<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه اصلی <span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				          	<li><a href="../index.html">صفحه اصلی 1</a></li>
-					        <li><a href="../v2/index.html">صفحه اصلی 2</a></li>
-			         	</ul>
-		       		</li>
-			        <li class="dropdown">
-			          	<a href="product_grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pمحصولات <span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				          	<li><a href="product_grid.html">محصولات شبکه ای</a></li>
-			            	<li><a href="product_list.html">محصولات لیستی</a></li>
-			                <li><a href="product_sidebar.html">محصولات با سایدبار</a></li>
-			            	<li><a href="product_single.html">ادامه مطلب محصول</a></li>
-			         	</ul>
-		       		</li>
-		       		<li class="dropdown">
-			          	<a href="#l" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحات<span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="faq.html">سؤالات متداول</a></li>
-					        <li><a href="404.html">خطای 404</a></li>
-			         	</ul>
-		       		</li>
-		       		 <li class="dropdown">
-			          	<a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">وبلاگ<span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="blog.html">وبلاگ شبکه ای</a></li>
-			                <li><a href="blog_list.html">وبلاگ لیستی</a></li>
-			            	<li><a href="blog_single.html">ادامه مطلب وبلاگ</a></li>
-			         	</ul>
-		       		</li>
-		       		<li><a href="contact.php">تماس</a></li>
-		      	</ul>
-		    </div>
-		</nav>
-	</div>
-	<div class="footer-mobile-bar">
-		<ul class="columns-2">
-			<li class="my-account">
-				<a class="my-accrount-footer" href="account.html">
-					<i class="fa fa-user-o" aria-hidden="true"></i>
-				</a>          
-			</li>
-			<li class="cart">
-				<a class="footer-cart-contents" href="cart.html" title="مشاهده سبد خریدتان">
-					<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-					<span class="count">1</span>
-				</a>
-			</li>
-		</ul>
+                                </div>
+                                <form class="opal-login-form-ajax" data-toggle="validator" role="form">
+                                    <p>
+                                        <label>نام کاربری یا ایمیل<span class="required">*</span></label>
+                                        <input name="username" type="text" required="" placeholder="نام کاربری">
+                                    </p>
+                                    <p>
+                                        <label>رمز عبور <span class="required">*</span></label>
+                                        <input name="password" type="password" required="" placeholder="رمز عبور">
+                                    </p>
+                                    <button type="submit" data-button-action="" class="btn btn-primary btn-block">ورود</button>
+                                    <input type="hidden" name="action" value="">
+                                    <input type="hidden" id="security-login" name="security-login" value="">
+                                    <input type="hidden" name="login" value="">
+                                </form>
+                                <div class="login-form-bottom">
+                                    <a href="#" class="lostpass-link" title="رمز عبور خود را فراموش کرده اید؟">رمز عبور خود را فراموش کرده اید؟</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-bar__right">
+                    <div class="header-language item-dropdown">
+                        <a href="#" class="top-bar__item">انگلیسی
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="content-dropdown">
+                            <li class="active"><a href="#">انگلیسی</a></li>
+                            <li><a href="#">فرانسوی</a></li>
+                            <li><a href="#">عربی</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-currency item-dropdown">
+                        <a href="#" class="top-bar__item">دلار آمریکا
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="content-dropdown">
+                            <li><a href="#"><span class="symbol">€</span>یورو</a></li>
+                            <li class="active"><a href="#"><span class="symbol">$</span>دلار آمریکا</a></li>
+                            <li><a href="#"><span class="symbol">£</span>GBP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Container -->
     </div>
-    <!-- /header-mobile -->
-    
-	<!-- End header ====
-    	======================================= -->
+    <!-- /top-bar -->
+
+    <!-- header-main -->
+    <div class="header-main pb-30">
+        <div class="container">
+            <nav id="nav" class="navbar">
+                <div class="nav-collapse">
+                    <span></span>
+                </div>
+                <div class="navbar-header">
+                    <!-- Logo -->
+                    <div class="navbar-brand">
+                        <a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                    </div>
+                    <!-- /Logo -->
+                </div>
+                <!--  Main navigation  -->
+
+                <div class="otf-flex-item"></div>
+                <?php
+                $row=listMenuDefault();
+                if($row):
+                    ?>
+                    <ul class="main-nav nav navbar-nav navbar-right">
+                        <?php
+                        foreach ($row as $val):
+                            ?>
+                            <li class="dropdown">
+                                <a href="<?php echo $val['url']; ?>"><?php echo $val['title']; ?></a>
+                                <?php
+                                $rows=listSubMenuDefault($val['id']);
+                                if($rows):
+                                    ?>
+                                    <ul class="dropdown-menu">
+                                        <?php
+                                        foreach ($rows as $value):
+                                            ?>
+                                            <li><a href="<?php echo $value['url']; ?>"><?php echo $value['title']; ?></a></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            </li>
+                        <?php
+                        endforeach;
+                        ?>
+                    </ul>
+                <?php endif; ?>
+                <!-- /Main navigation -->
+                <div class="otf-flex-item"></div>
+                <div class="site-header -icon">
+                    <!-- search -->
+                    <div class="site-header__search">
+                        <div class="ps-search-btn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <div class="ps-search">
+                            <div class="ps-search__content">
+                                <a class="ps-search__close" href="#"><span></span></a>
+                                <h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
+                                <form method="get" class="searchform" action="#">
+                                    <div class="wiget-search input-group">
+                                        <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . .">
+
+                                        <span class="input-group-addon input-large btn-search">
+									 	<span class="fa fa-search"></span>
+										<input type="submit" class="fa" value="">
+									 </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cart -->
+                    <div class="site-header__cart item-dropdown">
+                        <a href="cart.html" class="site-header__cart-toggle">
+                            <span class="cartcount">3</span>
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                            <span class="cartcost"><span class="money" data-currency-usd="0 ه ت ">0 ه ت </span></span>
+                        </a>
+                        <div class="widget_shopping_cart_content  content-dropdown">
+                            <div class="cart_list ">
+                                <div class="media widget-product">
+                                    <div class="media-left">
+                                        <a href="product_single.html" class="image pull-left">
+                                            <img src="assets/images/product/product_1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cart-main-content media-body">
+                                        <h3 class="name">
+                                            <a href="product_single.html">
+                                                Reebok Strength Gloves
+                                            </a>
+                                        </h3>
+                                        <p class="cart-item">
+                                            <span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>
+                                        </p>
+                                        <a href="#" class="remove" title="Remove this item">×</a>
+                                    </div>
+                                </div>
+                                <div class="media widget-product">
+                                    <div class="media-left">
+                                        <a href="product_single.html" class="image pull-left">
+                                            <img src="assets/images/product/product_2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cart-main-content media-body">
+                                        <h3 class="name">
+                                            <a href="product_single.html">
+                                                نوشیدنی انرژی زا ورزشی
+                                            </a>
+                                        </h3>
+                                        <p class="cart-item">
+                                            <span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>           </p>
+                                        <a href="#" class="remove" title="Remove this item">×</a>
+                                    </div>
+                                </div>
+                                <div class="media widget-product">
+                                    <div class="media-left">
+                                        <a href="product_single.html" class="image pull-left">
+                                            <img src="assets/images/product/product_3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cart-main-content media-body">
+                                        <h3 class="name">
+                                            <a href="product_single.html">
+                                                Bodymax contest weight
+                                            </a>
+                                        </h3>
+                                        <p class="cart-item">
+                                            <span class="quantity">2 × <span class="price-amount amount">200<span class="price-currencySymbol"> ه ت </span></span></span>           </p>
+                                        <a href="#" class="remove" title="Remove this item">×</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="total"><strong>جمع کل:</strong>
+                                <span class="price-amount amount">
+								    <span class="price-currencySymbol"> ه ت </span>700</span>
+                            </p>
+                            <p class="buttons clearfix">
+                                <a href="cart.html" class="btn view-cart btn-default btn-normal pull-right">مشاهده سبد خرید</a>
+                                <a href="#" class="btn check-out btn-primary btn-normal pull-left">پرداخت</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- /header-main -->
+</header>
+<!-- /Headerdesktop -->
+
+<!-- header-mobile -->
+<div class="header-mobile section-bg" style="background-image:url(assets/images/bg_header.jpg)">
+    <div class="header-mobile-top">
+        <div class="top-bar">
+            <div class="header-language item-dropdown">
+                <a href="#" class="top-bar__item">انگلیسی
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="content-dropdown">
+                    <li class="active"><a href="#">انگلیسی</a></li>
+                    <li><a href="#">فرانسوی</a></li>
+                    <li><a href="#">عربی</a></li>
+                </ul>
+            </div>
+            <div class="header-currency item-dropdown">
+                <a href="#" class="top-bar__item">دلار آمریکا
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="content-dropdown">
+                    <li><a href="#"><span class="symbol">€</span>یورو</a></li>
+                    <li class="active"><a href="#"><span class="symbol">$</span>دلار آمریکا</a></li>
+                    <li><a href="#"><span class="symbol">£</span>GBP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-header -icon">
+            <!-- search -->
+            <div class="site-header__search">
+                <div class="ps-search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="ps-search">
+                    <div class="ps-search__content">
+                        <a class="ps-search__close" href="#"><span></span></a>
+                        <h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
+                        <form method="get" class="searchform" action="#">
+                            <div class="wiget-search input-group">
+                                <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . .">
+
+                                <span class="input-group-addon input-large btn-search">
+									 	<span class="fa fa-search"></span>
+									 	<input type="submit" class="fa" value="">
+									 </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--end search -->
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- logo -->
+            <div class="navbar-brand">
+                <a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""> </a>
+            </div>
+            <!-- logo -->
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php
+            $row=listMenuDefault();
+            if($row):
+                ?>
+                <ul class="nav navbar-nav">
+                    <?php
+                    foreach ($row as $val):
+                        ?>
+                        <li class="active dropdown">
+                            <a href="<?php echo $val['url']; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $val['title']; ?><span class="caret"></span></a>
+                            <?php
+                            $rows=listSubMenuDefault($val['id']);
+                            if($rows):
+                                ?>
+                                <ul class="dropdown-menu">
+                                    <?php
+                                    foreach ($rows as $value):
+                                        ?>
+                                        <li><a href="<?php echo $value['url']; ?>"><?php echo $value['title']; ?></a></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+                        </li>
+                    <?php
+                    endforeach;
+                    ?>
+                </ul>
+            <?php endif; ?>
+        </div>
+    </nav>
+</div>
+<div class="footer-mobile-bar">
+    <ul class="columns-2">
+        <li class="my-account">
+            <a class="my-accrount-footer" href="account.html">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="cart">
+            <a class="footer-cart-contents" href="cart.html" title="مشاهده سبد خریدتان">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                <span class="count">1</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- /header-mobile -->
+
+<!-- End header ====
+    ======================================= -->
 
 	
 	<!-- Start breadcrumb ====
@@ -428,281 +417,267 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="tab-contact clearfix">
-						 <ul class="nav" role="tablist">
-						    <li class="active"><a data-toggle="tab" href="#tab_contact1">ایالات متحده</a></li>
-						    <li><a data-toggle="tab" href="#tab_contact2">ایران</a></li>
-						    <li><a data-toggle="tab" href="#tab_contact3">ژاپن</a></li>
-						    <li><a data-toggle="tab" href="#tab_contact4">چین</a></li>
-						    <li><a data-toggle="tab" href="#tab_contact5">انگلستان</a></li>
-						    <li><a data-toggle="tab" href="#tab_contact6">روسیه</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-5">
-				    <div class="tab-content features skin1">
-				    	<div id="tab_contact1" class="tab-pane fade in active">
-							<div class="items_group clearfix">
-								<div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_phone.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>تماس بگیرید</h4>
-			                            <p>
-			                            	خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
-											شنبه تا پنجشنبه، 8 صبح تا 22 شب
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_mail.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>برایمان بنویسید</h4>
-			                            <p>
-			                            	ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
-			                            	<br/>خیلی زود باهاتون تماس می گیریم.
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_map.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>ملاقات با ما</h4>
-			                            <p>
-			                            	به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
-										</p>
-			                        </div>
-			                    </div>
-		                    </div>
-		                </div>
-		                <div id="tab_contact2" class="tab-pane fade">
+                <div class="col-md-5">
+                    <div class="tab-content features skin1">
+                        <div id="tab_contact1" class="tab-pane fade in active">
                             <div class="items_group clearfix">
-								<div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_phone.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>تماس بگیرید</h4>
-			                            <p>
-			                            	خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
-											شنبه تا پنجشنبه، 8 صبح تا 22 شب
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_mail.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>برایمان بنویسید</h4>
-			                            <p>
-			                            	ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
-			                            	<br/>خیلی زود باهاتون تماس می گیریم.
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_map.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>ملاقات با ما</h4>
-			                            <p>
-			                            	به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
-										</p>
-			                        </div>
-			                    </div>
-		                    </div>
-					   	</div>
-					   	<div id="tab_contact3" class="tab-pane fade">
-					   		<div class="items_group clearfix">
-								<div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_phone.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>تماس بگیرید</h4>
-			                            <p>
-			                            	خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
-											شنبه تا پنجشنبه، 8 صبح تا 22 شب
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_mail.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>برایمان بنویسید</h4>
-			                            <p>
-			                            	ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
-			                            	<br/>خیلی زود باهاتون تماس می گیریم.
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_map.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>ملاقات با ما</h4>
-			                            <p>
-			                            	به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
-										</p>
-			                        </div>
-			                    </div>
-		                    </div>
-					   	</div>
-					   	<div id="tab_contact4" class="tab-pane fade">
-					   		<div class="items_group clearfix">
-								<div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_phone.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>تماس بگیرید</h4>
-			                            <p>
-			                            	خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
-											شنبه تا پنجشنبه، 8 صبح تا 22 شب
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_mail.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>برایمان بنویسید</h4>
-			                            <p>
-			                            	ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
-			                            	<br/>خیلی زود باهاتون تماس می گیریم.
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_map.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>ملاقات با ما</h4>
-			                            <p>
-			                            	به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
-										</p>
-			                        </div>
-			                    </div>
-		                    </div>
-					   	</div>
-					   	<div id="tab_contact5" class="tab-pane fade">
-					   		<div class="items_group clearfix">
-								<div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_phone.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>تماس بگیرید</h4>
-			                            <p>
-			                            	خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
-											شنبه تا پنجشنبه، 8 صبح تا 22 شب
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_mail.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>برایمان بنویسید</h4>
-			                            <p>
-			                            	ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
-			                            	<br/>خیلی زود باهاتون تماس می گیریم.
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_map.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>ملاقات با ما</h4>
-			                            <p>
-			                            	به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
-										</p>
-			                        </div>
-			                    </div>
-		                    </div>
-					   	</div>
-					   	<div id="tab_contact6" class="tab-pane fade">
-					   		<div class="items_group clearfix">
-								<div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_phone.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>تماس بگیرید</h4>
-			                            <p>
-			                            	خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
-											شنبه تا پنجشنبه، 8 صبح تا 22 شب
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_mail.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>برایمان بنویسید</h4>
-			                            <p>
-			                            	ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
-			                            	<br/>خیلی زود باهاتون تماس می گیریم.
-										</p>
-			                        </div>
-			                    </div>
-			                    <div class="features_list list_item clearfix">
-			                        <div class="features-images">
-			                           <img src="assets/images/icon_contact_map.png" alt="">
-			                        </div>
-			                        <div class="features-description">
-			                            <h4>ملاقات با ما</h4>
-			                            <p>
-			                            	به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
-										</p>
-			                        </div>
-			                    </div>
-		                    </div>
-					   	</div>
-	                </div>
-				</div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_phone.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>تماس بگیرید</h4>
+                                        <p>
+                                            خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
+                                            شنبه تا پنجشنبه، 8 صبح تا 22 شب
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_mail.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>برایمان بنویسید</h4>
+                                        <p>
+                                            ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
+                                            <br/>خیلی زود باهاتون تماس می گیریم.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_map.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>ملاقات با ما</h4>
+                                        <p>
+                                            به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab_contact2" class="tab-pane fade">
+                            <div class="items_group clearfix">
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_phone.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>تماس بگیرید</h4>
+                                        <p>
+                                            خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
+                                            شنبه تا پنجشنبه، 8 صبح تا 22 شب
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_mail.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>برایمان بنویسید</h4>
+                                        <p>
+                                            ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
+                                            <br/>خیلی زود باهاتون تماس می گیریم.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_map.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>ملاقات با ما</h4>
+                                        <p>
+                                            به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab_contact3" class="tab-pane fade">
+                            <div class="items_group clearfix">
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_phone.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>تماس بگیرید</h4>
+                                        <p>
+                                            خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
+                                            شنبه تا پنجشنبه، 8 صبح تا 22 شب
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_mail.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>برایمان بنویسید</h4>
+                                        <p>
+                                            ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
+                                            <br/>خیلی زود باهاتون تماس می گیریم.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_map.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>ملاقات با ما</h4>
+                                        <p>
+                                            به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab_contact4" class="tab-pane fade">
+                            <div class="items_group clearfix">
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_phone.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>تماس بگیرید</h4>
+                                        <p>
+                                            خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
+                                            شنبه تا پنجشنبه، 8 صبح تا 22 شب
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_mail.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>برایمان بنویسید</h4>
+                                        <p>
+                                            ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
+                                            <br/>خیلی زود باهاتون تماس می گیریم.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_map.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>ملاقات با ما</h4>
+                                        <p>
+                                            به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab_contact5" class="tab-pane fade">
+                            <div class="items_group clearfix">
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_phone.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>تماس بگیرید</h4>
+                                        <p>
+                                            خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
+                                            شنبه تا پنجشنبه، 8 صبح تا 22 شب
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_mail.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>برایمان بنویسید</h4>
+                                        <p>
+                                            ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
+                                            <br/>خیلی زود باهاتون تماس می گیریم.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_map.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>ملاقات با ما</h4>
+                                        <p>
+                                            به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab_contact6" class="tab-pane fade">
+                            <div class="items_group clearfix">
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_phone.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>تماس بگیرید</h4>
+                                        <p>
+                                            خیلی راحت با ما تمای بگیرید با 0123456789,<br/>
+                                            شنبه تا پنجشنبه، 8 صبح تا 22 شب
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_mail.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>برایمان بنویسید</h4>
+                                        <p>
+                                            ایمیل خود را به آدرس <strong><a href="mailto:info@email.com">info@email.com</a> ارسال کنید</strong>,
+                                            <br/>خیلی زود باهاتون تماس می گیریم.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="features_list list_item clearfix">
+                                    <div class="features-images">
+                                        <img src="assets/images/icon_contact_map.png" alt="">
+                                    </div>
+                                    <div class="features-description">
+                                        <h4>ملاقات با ما</h4>
+                                        <p>
+                                            به آدرس <strong>ایران، تهران، میدان آزادی</strong> بیاید و حضوری ما رو ملاقات کنید.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 				<div class="col-md-7">
 					<div class="row">
-						<form action="#" method="post" id="commentform" class="comment-form" novalidate="">
+						<form method="post" id="commentform" class="comment-form" novalidate="">
 							<div class="form-group col col-md-6"> 
-								<input type="text" name="author" class="form-control" placeholder="نام کامل: " id="author" value="" aria-required="true">
+								<input type="text" name="frm[name]" class="form-control" placeholder="نام : " id="author" value="" aria-required="true">
 							</div>
+                            <div class="form-group col col-md-6">
+                                <input type="text" name="frm[lastname]" class="form-control" placeholder="نام خانوادگی: " id="author" value="" aria-required="true">
+                            </div>
 							<div class="form-group col col-md-6"> 
-								<input type="text" name="email" class="form-control" placeholder="آدرس ایمیل: " id="email" value="" aria-required="true">
-							</div>
-							<div class="form-group col col-md-6"> 
-								<input type="text" name="phone" class="form-control" placeholder="شماره تماس شما: " id="phone" value="" aria-required="true">
+								<input type="text" name="frm[email]" class="form-control" placeholder="آدرس ایمیل: " id="email" value="" aria-required="true">
 							</div>
 							<div class="form-group col col-md-6">
-								<select name="select" class="select form-control" id="select" aria-invalid="false">
-									<option value="انتخاب عنوان">انتخاب عنوان</option>
-									<option value="مراقبت از پوست">مراقبت از پوست</option>
-									<option value="مراقبت از مو">مراقبت از مو</option>
-									<option value="مراقبت های ویژه">مراقبت های ویژه</option>
-								</select>
-							</div>
+                                <input type="text" name="frm[phone]" class="form-control" placeholder="شماره تماس شما: " id="phone" value="" aria-required="true">
+                            </div>
+                            <div class="form-group col col-md-12">
+                                <input type="text" name="frm[subject]" class="form-control" placeholder="موضوع : " id="author" value="" aria-required="true">
+                            </div>
 							<div class="form-group  col col-md-12">
-								<textarea rows="8" id="comment" class="form-control" placeholder="پیام . . . *" name="comment" aria-required="true"></textarea>
+								<textarea rows="8" id="comment" class="form-control" placeholder="پیام . . . *" name="frm[text]" aria-required="true"></textarea>
 							</div>
 							<div class="form-submit col col-md-12">
-								<input name="submit" type="submit" id="submit" class="btn btn-primary" value="ارسال"> 
+								<input name="btn" type="submit" id="submit" class="btn btn-primary" value="ارسال">
 								<input type="hidden" name="comment_post_ID" value="" id="comment_post_ID"> 
 								<input type="hidden" name="comment_parent" id="comment_parent" value="">
 							</div>

@@ -320,6 +320,23 @@ $activePage = "dashbord.php?m=menu&p=list";
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-phone"></i>
+                        <p>
+                              مدیریت تماس ها
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=contact&p=list" class="nav-link active">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>لیست تماس ها </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
                   <a href="#" class="nav-link">
                     <i class="nav-icon fa fa-pie-chart"></i>
                     <p>
