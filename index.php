@@ -906,7 +906,7 @@
 		    			<h3 class="widget-title">لینک های مفید</h3>
 		    			<ul>
 		    				<li><a href="about.html">درباره ما</a></li>
-		    				<li><a href="contact.php">تماس با ما</a></li>
+		    				<li><a href="contacts.php">تماس با ما</a></li>
 		    				<li><a href="blog.html">اخبار</a></li>
 		    				<li><a href="account.html">حساب من</a></li>
 		    				<li><a href="faq.html">سؤالات متداول</a></li>

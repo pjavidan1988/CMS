@@ -137,7 +137,7 @@ include_once 'include/functions.php';
 						<li class="dropdown">
 							<a href="<?php echo $val['url']; ?>"><?php echo $val['title']; ?></a>
                             <?php
-                            $rows=listSubMenuDefault($val['id']);
+                            $rows=listSubProductDefault($val['id']);
                             if($rows):
                             ?>
 							<ul class="dropdown-menu">
@@ -597,7 +597,7 @@ include_once 'include/functions.php';
 		    			<h3 class="widget-title">لینک های مفید</h3>
 		    			<ul>
 		    				<li><a href="about.html">درباره ما</a></li>
-		    				<li><a href="contact.php">تماس با ما</a></li>
+		    				<li><a href="contacts.php">تماس با ما</a></li>
 		    				<li><a href="blog.html">وبلاگ</a></li>
 		    				<li><a href="account.html">حساب من</a></li>
 		    				<li><a href="product_grid.html">فروشگاه</a></li>
