@@ -1,5 +1,6 @@
 <?php
     include_once 'include/functions.php';
+    $settings=settings();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +9,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php echo $settings['description'];?>">
 
-	<title>قالب HTML انرکاس</title>
+	<title>
+        <?php
+        echo $settings['title'];
+        ?>
+    </title>
 
 	<!-- preloader CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/preloader.css"> 
@@ -119,7 +125,7 @@
 					<div class="navbar-header">
 						<!-- Logo -->
 						<div class="navbar-brand">
-							<a class="logo" href="index.html"><img src="assets/images/logo_home.png" alt=""></a> 
+							<a class="img" href="index.html"><img src="admin/<?php echo $settings['logo'];?>" width="100px" height="100px" alt=""></a>
 						</div>
 						<!-- /Logo -->
 					</div>
@@ -326,7 +332,7 @@
 		      </button>
 		      <!-- logo -->
 		      <div class="navbar-brand">
-		      	<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""> </a> 
+		      	<a class="logo" href="index.html"><img src="admin/<?php echo $settings['logo'];?>" width="120px" height="120px" alt=""> </a>
 		      </div>
 		      <!-- logo -->
 		    </div>
@@ -395,7 +401,7 @@
 					    <div class="container">
 
 					        <h2 class="sp-layer main-slider__title" data-horizontal="800" data-vertical="290" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
-									نیرویی اصیل
+                                اصیل
 							</h2>
 							<h2 class="sp-layer main-slider__title font-bold" data-horizontal="600" data-vertical="380" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
 									آسوده خاطر بنوشید
@@ -440,7 +446,7 @@
 						</div>
 						<div class="features-description">
 							<h4>بیشترین انرژی</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
 					</div>
@@ -452,7 +458,7 @@
 						</div>
 						<div class="features-description">
 							<h4>کاملا طبیعی</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
 					</div>
@@ -464,7 +470,7 @@
 						</div>
 						<div class="features-description">
 							<h4>میلی لیتر</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
 					</div>
@@ -476,7 +482,7 @@
 						</div>
 						<div class="features-description">
 							<h4>کالری</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
 					</div>
@@ -494,10 +500,10 @@
     		<div class="features-heading pb-50">
 				<h2 class="features-heading__title">چرا ما رو انتخاب کنید</h2>
 				<p class="features-heading__description">
-						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 					<br/>
-					و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله 
-					<br/>در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی 
+					و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+					<br/>در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
 				</p>
 			</div>
     		<div class="row">
@@ -896,10 +902,10 @@
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-md-6 col-sm-12 col-xs-12 footer-block">
-			    		<img src="assets/images/logo.png" alt="">
-			    		<p class="address pt-30">دفتر ما: ایران، تهران، تهران بزرگ، میدان آزادی. . .<br>
-							تلفن: 09123456789<br>
-							پست الکترونیک: email@email.com
+			    		<img src="admin/<?php echo $settings['logo'];?>" width="120px" height="120px">
+			    		<p class="address pt-30" name="">دفتر ما: <?php echo $settings['address'];?><br>
+							پست الکترونیک: <?php echo $settings['email'];?><br>
+                            تلفن : <?php echo $settings['tel'];?>
 						</p>
 			    	</div>
 			    	<div class="col-md-3 col-sm-6 col-xs-12 footer-block footer-1">
@@ -952,24 +958,21 @@
 	   				<div class="col-md-4 col-sm-6">
 			   			<ul class="social">
 							<li>
-								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="<?php echo $settings['facebook'];?>"><i class="fa fa-facebook"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="<?php echo $settings['instagram'];?>"><i class="fa fa-instagram"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-google"></i></a>
+								<a href="<?php echo $settings['telegram'];?>"><i class="fa fa-telegram"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="<?php echo $settings['whatsapp'];?>"><i class="fa fa-whatsapp"></i></a>
 							</li>
 						</ul>
 					</div>
 		    		<div class="copyright col-md-4 col-sm-6">
-		        		© 1398. تمامی حقوق برای ما محفوظ است.<a href="#" target="_blank">انرکاس</a>
+                        <?php echo $settings['copyright'];?>  <a href="<?php echo $settings['copyright_link'];?>" target="_blank">  <?php echo $settings['copyright_name'];?></a>
 		        	</div>
 		        	<div class="payment col-md-4 col-sm-12">
 		        		<img src="assets/images/payment.png" alt="">

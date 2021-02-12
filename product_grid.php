@@ -8,10 +8,12 @@ include_once 'include/functions.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>قالب HTML انرکاس</title>
+	<title>
+محصولات
+    </title>
 
 	<!-- preloader CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/preloader.css"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/preloader.css">
 	<!-- slider-pro CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/slider-pro.css">
 	<!-- slick CSS -->
@@ -19,13 +21,13 @@ include_once 'include/functions.php';
 
 	<!-- Main Style CSS CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	
+
     <!-- font-awesome CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
 	<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 
-	 <!-- Fonts --> 
+	 <!-- Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700,900' rel='stylesheet' type='text/css'>
 </head>
 
@@ -76,9 +78,9 @@ include_once 'include/functions.php';
 								    </form>
 								    <div class="login-form-bottom">
 								      		<a href="#" class="lostpass-link" title="رمز عبور خود را فراموش کرده اید؟">رمز عبور خود را فراموش کرده اید؟</a>
-								    </div>          
+								    </div>
 								</div>
-							</div>     
+							</div>
 			        	</div>
 			        </div>
 			        <div class="top-bar__right">
@@ -119,7 +121,7 @@ include_once 'include/functions.php';
 					<div class="navbar-header">
 						<!-- Logo -->
 						<div class="navbar-brand">
-							<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a> 
+							<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>
 						</div>
 						<!-- /Logo -->
 					</div>
@@ -135,9 +137,11 @@ include_once 'include/functions.php';
                         foreach ($row as $val):
                         ?>
 						<li class="dropdown">
-							<a href="<?php echo $val['url']; ?>"><?php echo $val['title']; ?></a>
+							<a href="<?php echo $val['url']; ?>">
+                                <?php echo $val['title']; ?>
+                            </a>
                             <?php
-                            $rows=listSubProductDefault($val['id']);
+                            $rows=listSubMenuDefault($val['id']);
                             if($rows):
                             ?>
 							<ul class="dropdown-menu">
@@ -168,11 +172,11 @@ include_once 'include/functions.php';
 						     	<h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
 						        <form method="get" class="searchform" action="#">
 									<div class="wiget-search input-group">
-									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . ."> 
+									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . .">
 
-									 <span class="input-group-addon input-large btn-search"> 
+									 <span class="input-group-addon input-large btn-search">
 									 	<span class="fa fa-search"></span>
-										<input type="submit" class="fa" value=""> 
+										<input type="submit" class="fa" value="">
 									 </span>
 									</div>
 								</form>
@@ -191,7 +195,7 @@ include_once 'include/functions.php';
 								    <div class="media widget-product">
 								      <div class="media-left">
 									      <a href="product_single.html" class="image pull-left">
-										      <img src="assets/images/product/product_1.jpg" alt=""> 
+										      <img src="assets/images/product/product_1.jpg" alt="">
 										  </a>
 								      </div>
 								      <div class="cart-main-content media-body">
@@ -201,7 +205,7 @@ include_once 'include/functions.php';
 										      </a>
 									      	</h3>
 									     	 <p class="cart-item">
-									      		<span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>  
+									      		<span class="quantity">2 × <span class="price-amount amount">250<span class="price-currencySymbol"> ه ت </span></span></span>
 									      	 </p>
 									      <a href="#" class="remove" title="Remove this item">×</a>
 								      </div>
@@ -209,7 +213,7 @@ include_once 'include/functions.php';
 								    <div class="media widget-product">
 								      <div class="media-left">
 									      <a href="product_single.html" class="image pull-left">
-										      <img src="assets/images/product/product_2.jpg" alt=""> 
+										      <img src="assets/images/product/product_2.jpg" alt="">
 										  </a>
 								      </div>
 								      <div class="cart-main-content media-body">
@@ -226,7 +230,7 @@ include_once 'include/functions.php';
 								     <div class="media widget-product">
 								      <div class="media-left">
 									      <a href="product_single.html" class="image pull-left">
-										      <img src="assets/images/product/product_3.jpg" alt=""> 
+										      <img src="assets/images/product/product_3.jpg" alt="">
 										  </a>
 								      </div>
 								      <div class="cart-main-content media-body">
@@ -296,11 +300,11 @@ include_once 'include/functions.php';
 						     	<h3 class="search_title">کلیدواژه خود را وارد کنید</h3>
 						        <form method="get" class="searchform" action="#">
 									<div class="wiget-search input-group">
-									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . ."> 
+									 <input name="s" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="جستجو . . .">
 
-									 <span class="input-group-addon input-large btn-search"> 
+									 <span class="input-group-addon input-large btn-search">
 									 	<span class="fa fa-search"></span>
-									 	<input type="submit" class="fa" value=""> 
+									 	<input type="submit" class="fa" value="">
 									 </span>
 									</div>
 								</form>
@@ -310,7 +314,7 @@ include_once 'include/functions.php';
 				<!--end search -->
 		    </div>
 	    </div>
-		
+
 		<nav class="navbar">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -321,7 +325,7 @@ include_once 'include/functions.php';
 		      </button>
 		      <!-- logo -->
 		      <div class="navbar-brand">
-		      	<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""> </a> 
+		      	<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""> </a>
 		      </div>
 		      <!-- logo -->
 		    </div>
@@ -363,7 +367,7 @@ include_once 'include/functions.php';
 			<li class="my-account">
 				<a class="my-accrount-footer" href="account.html">
 					<i class="fa fa-user-o" aria-hidden="true"></i>
-				</a>          
+				</a>
 			</li>
 			<li class="cart">
 				<a class="footer-cart-contents" href="cart.html" title="مشاهده سبد خریدتان">
@@ -374,11 +378,11 @@ include_once 'include/functions.php';
 		</ul>
     </div>
     <!-- /header-mobile -->
-    
+
 	<!-- End header ====
     	======================================= -->
 
-	
+
 	<!-- =====================================
     	==== Start breadcrumb -->
    	<div class="breadcrumb">

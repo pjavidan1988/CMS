@@ -26,7 +26,7 @@ session_start();
 
     }
 
-
+include_once 'setting.php';
 @$m=$_GET['m']?$_GET['m']:'home';
 switch ($m){
     case 'home':
