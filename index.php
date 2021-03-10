@@ -442,10 +442,10 @@
 				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/icon-feature1.png" alt="">
+							<img src="assets/images/icon-feature1.png" width="50" height="60"  alt="">
 						</div>
 						<div class="features-description">
-							<h4>بیشترین انرژی</h4>
+							<h4>تنوع در ابعاد</h4>
 							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
@@ -454,10 +454,10 @@
 				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/icon-feature2.png" alt="">
+							<img src="assets/images/icon-feature2.png" width="50" height="60" alt="">
 						</div>
 						<div class="features-description">
-							<h4>کاملا طبیعی</h4>
+							<h4>خدمات پس از فروش</h4>
 							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
@@ -466,10 +466,10 @@
 				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/icon-feature3.png" alt="">
+							<img src="assets/images/icon-feature3.png" width="50" height="60" alt="">
 						</div>
 						<div class="features-description">
-							<h4>میلی لیتر</h4>
+							<h4>ارسال سریع</h4>
 							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
@@ -478,10 +478,10 @@
 				<div class="col-md-3 col-sm-6 features_content">
 					<div class="features_list">
 						<div class="features-images">
-							<img src="assets/images/icon-feature4.png" alt="">
+							<img src="assets/images/icon-feature4.png" width="50" height="60" alt="">
 						</div>
 						<div class="features-description">
-							<h4>کالری</h4>
+							<h4>کیفیت بالا</h4>
 							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
 							</p>
 						</div>
