@@ -7,7 +7,7 @@
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home"">خانه</a></li>
-                        <li class="breadcrumb-item active">لیست محصولات</li>
+                        <li class="breadcrumb-item active">لیست تماس ها</li>
                     </ol>
                 </div>
             </div>
