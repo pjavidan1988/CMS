@@ -1,6 +1,7 @@
 <?php
     include_once 'include/functions.php';
     $settings=settings();
+    $logo=logo();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,7 +126,7 @@
 					<div class="navbar-header">
 						<!-- Logo -->
 						<div class="navbar-brand">
-							<a class="img" href="index.html"><img src="admin/<?php echo $settings['logo'];?>" width="100px" height="100px" alt=""></a>
+							<a class="img" href="index.html"><img src="admin/<?php echo $logo['img'];?>" width="100px" height="100px" alt=""></a>
 						</div>
 						<!-- /Logo -->
 					</div>
@@ -332,7 +333,7 @@
 		      </button>
 		      <!-- logo -->
 		      <div class="navbar-brand">
-		      	<a class="logo" href="index.html"><img src="admin/<?php echo $settings['logo'];?>" width="120px" height="120px" alt=""> </a>
+		      	<a class="logo" href="index.html"><img src="admin/<?php echo $logo['img'];?>" width="120px" height="120px" alt=""> </a>
 		      </div>
 		      <!-- logo -->
 		    </div>
@@ -398,19 +399,17 @@
 		        <div class="sp-slides text-white">
 		           <!-- Slide 1 -->
 		           	<div class="sp-slide section-bg" style="background-image:url(assets/images/home2_bg_header.jpg)">
-					    <div class="container">
 
+					    <div class="container">
 					        <h2 class="sp-layer main-slider__title" data-horizontal="800" data-vertical="290" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
-                                اصیل
+                                <?php echo $settings['main_slider_title'];?>
 							</h2>
 							<h2 class="sp-layer main-slider__title font-bold" data-horizontal="600" data-vertical="380" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="800" data-hide-delay="800">
-									آسوده خاطر بنوشید
+                                <?php echo $settings['main_slider_title2'];?>
 							</h2>
-
 					        <div class="sp-layer main-slider__text" data-horizontal="600" data-vertical="500"  data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="1200" data-hide-delay="1200">
 					            <p>
-									لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از<br>
-									طراحان گرافیک است. چاپگرها و متون
+                                    <?php echo $settings['main_slider_text'];?>
 								</p>
 					            <div class="main-slider__btn-group">
 					                <a class="btn btn-features btn-primary mt-60" href="product_list.html">هم اکنون بخرید <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
@@ -420,7 +419,6 @@
 					        <span class="sp-layer main-slider__img" data-horizontal="0" data-vertical="120" data-width="45%" data-show-transition="up" data-hide-transition="right" data-show-duration="800" data-show-delay="400" data-hide-delay="400">
 									<img class="img-responsive" src="assets/images/slider/image_slider1.png" height="612" width="759" alt="">
 							</span>
-							
 					    </div>
 					</div>
 		            <!-- end sp-slide -->
@@ -872,7 +870,7 @@
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-md-6 col-sm-12 col-xs-12 footer-block">
-			    		<img src="admin/<?php echo $settings['logo'];?>" width="120px" height="120px">
+			    		<img src="admin/<?php echo $logo['img'];?>" width="120px" height="120px">
 			    		<p class="address pt-30" name="">دفتر ما: <?php echo $settings['address'];?><br>
 							پست الکترونیک: <?php echo $settings['email'];?><br>
                             تلفن : <?php echo $settings['tel'];?>

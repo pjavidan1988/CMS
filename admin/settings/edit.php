@@ -96,18 +96,17 @@ if(isset($_POST['btn'])){
                                     <input type="text" class="form-control" name="frm[whatsapp]"  value="<?php echo $settings['whatsapp'];?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">متن لوگو</label>
-                                    <input type="text" class="form-control" name="frm[logotype]"  value="<?php echo $settings['logotype'];?>">
+                                    <label for="exampleInputPassword1">عنوان روی اسلایدر خط اول</label>
+                                    <input type="text" class="form-control" name="frm[main_slider_title]"  value="<?php echo $settings['main_slider_title'];?>">
                                 </div>
-                                <div class="form-group pt-4">
-                                    <div class="btn btn-default btn-file">
-                                        <i class="fa fa-paperclip"></i> اضافه کردن تصویر
-                                        <input type="file" name="logo" id="input-b6" class="file">
-                                    </div>
-                                    <img src="<?php echo $settings['logo'];?>" width="60">
-                                    <p class="help-block">حداکثر 32MB</p>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">عنوان روی ایلایدر خط دوم</label>
+                                    <input type="text" class="form-control" name="frm[main_slider_title2]"  value="<?php echo $settings['main_slider_title2'];?>">
                                 </div>
-
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">متن روی اسلایدر</label>
+                                    <textarea type="text" class="form-control" name="frm[main_slider_text]" ><?php echo $settings['main_slider_text'];?></textarea>
+                                </div>
                             </div>
                             <!-- /.card-body -->
 

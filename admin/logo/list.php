@@ -7,7 +7,7 @@
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home"">خانه</a></li>
-                        <li class="breadcrumb-item active">لیست ویجت اول</li>
+                        <li class="breadcrumb-item active">لوگو</li>
                     </ol>
                 </div>
             </div>
@@ -18,7 +18,7 @@
         <!-- Default box -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title"> لیست ویجت اول</h3>
+                <h3 class="card-title"> لوگو</h3>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -27,24 +27,18 @@
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>عنوان ویجت</th>
-                                    <th> متن ویجت</th>
-                                    <th> تصویر</th>
+                                    <th> لوگو</th>
                                     <th>ویرایش</th>
-                                    <th>حذف</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php
-                                $listContact=listWidget();
+                                $listContact=listLogo();
                                 foreach($listContact as $val):
                                     ?>
                                     <tr>
-                                        <td><?php echo $val['title']; ?></td>
-                                        <td><a href="dashbord.php?m=widget&p=detail&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i></a></td>
                                         <td><img src="<?php echo $val['img']; ?>" width="60"></td>
-                                        <td><a href="dashbord.php?m=widget&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
-                                        <td><a href="dashbord.php?m=widget&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
+                                        <td><a href="dashbord.php?m=logo&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
                                     </tr>
                                 <?php
                                 endforeach;

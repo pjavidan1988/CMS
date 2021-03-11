@@ -365,7 +365,15 @@ $activePage = "dashbord.php?m=menu&p=list";
                         <li class="nav-item">
                             <a href="dashbord.php?m=widget&p=list" class="nav-link active">
                                 <i class="fa fa-list nav-icon"></i>
-                                <p>لیست ویجت ها </p>
+                                <p>لیست ویجت اول</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=widget1&p=list" class="nav-link active">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>لیست ویجت دوم</p>
                             </a>
                         </li>
                     </ul>
@@ -373,7 +381,32 @@ $activePage = "dashbord.php?m=menu&p=list";
                         <li class="nav-item">
                             <a href="dashbord.php?m=widget&p=add" class="nav-link active">
                                 <i class="fa fa-plus-square-o nav-icon"></i>
-                                <p>افزودن ویدجت جدید</p>
+                                <p>افزودن ویجت اول جدید</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=widget1&p=add" class="nav-link active">
+                                <i class="fa fa-plus-square-o nav-icon"></i>
+                                <p>افزودن ویجت دوم جدید</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-slack"></i>
+                        <p>
+                              مدیریت لوگو
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="dashbord.php?m=logo&p=list" class="nav-link active">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p> لوگو بالای سایت </p>
                             </a>
                         </li>
                     </ul>

@@ -45,4 +45,8 @@ switch ($m){
         include_once 'contact.php';
     case 'widget':
         include_once 'widget.php';
+    case 'widget1':
+        include_once 'widget1.php';
+    case 'logo':
+        include_once 'logo.php';
 }

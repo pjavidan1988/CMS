@@ -1,14 +1,13 @@
 <?php
 ob_start();
 $id=$_GET['id'];
-$result=showEditWidget($id);
+$result=showEditLogo($id);
 
 
 if(isset($_POST['btn'])){
-    $data=$_POST['frm'];
     $oldPic=$result['img'];
-    editWidget($data,$id,'img',$oldPic);
-    header("location:dashbord.php?m=widget&p=list");
+    editLogo($id,'img',$oldPic);
+    header("location:dashbord.php?m=logo&p=list");
 }
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -20,7 +19,7 @@ if(isset($_POST['btn'])){
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home">خانه</a></li>
-                        <li class="breadcrumb-item active">ویرایش ویجت اول </li>
+                        <li class="breadcrumb-item active">ویرایش لوگو </li>
                     </ol>
                 </div>
             </div>
@@ -36,20 +35,12 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title"> ویرایش ویجت :  <?php echo $result['title']; ?></h3>
+                            <h3 class="card-title"> ویرایش لوگو :  </h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form role="form" method="post" enctype="multipart/form-data">
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان ویجت</label>
-                                    <input type="text" class="form-control" name="frm[title]" value="<?php echo $result['title'];?>">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">متن ویجت</label>
-                                    <textarea type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
-                                </div>
                                 <div class="form-group pt-4">
                                     <div class="btn btn-default btn-file">
                                         <i class="fa fa-paperclip"></i> اضافه کردن تصویر

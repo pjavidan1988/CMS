@@ -1,16 +1,10 @@
 <?php
-ob_start();
-$id=$_GET['id'];
-$result=showEditWidget($id);
-
-
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
-    $oldPic=$result['img'];
-    editWidget($data,$id,'img',$oldPic);
-    header("location:dashbord.php?m=widget&p=list");
+    addWidget1($data);
 }
 ?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -20,7 +14,7 @@ if(isset($_POST['btn'])){
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home">خانه</a></li>
-                        <li class="breadcrumb-item active">ویرایش ویجت اول </li>
+                        <li class="breadcrumb-item active">افزودن ویجت دوم جدید</li>
                     </ol>
                 </div>
             </div>
@@ -36,33 +30,29 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title"> ویرایش ویجت :  <?php echo $result['title']; ?></h3>
+                            <h3 class="card-title">افزودن ویجت دوم جدید</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form role="form" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان ویجت</label>
-                                    <input type="text" class="form-control" name="frm[title]" value="<?php echo $result['title'];?>">
+                                    <label for="exampleInputEmail1">عنوان خط اول ویجت</label>
+                                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان ویجت خط اول را وارد کنید">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">متن ویجت</label>
-                                    <textarea type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
+                                    <label for="exampleInputEmail1">عنوان خط دوم ویجت</label>
+                                    <input type="text" class="form-control" name="frm[title2]" placeholder="عنوان ویجت خط دوم را وارد کنید">
                                 </div>
-                                <div class="form-group pt-4">
-                                    <div class="btn btn-default btn-file">
-                                        <i class="fa fa-paperclip"></i> اضافه کردن تصویر
-                                        <input type="file" name="img" id="input-b6" class="file">
-                                    </div>
-                                        <img src="<?php echo $result['img'];?>" width="60">
-                                    <p class="help-block">حداکثر 32MB</p>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">متن</label>
+                                    <textarea type="text" class="form-control" name="frm[text]" placeholder="متن خود را بنویسید"></textarea>
                                 </div>
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" name="btn" class="btn btn-primary">ویرایش</button>
+                                <button type="submit" name="btn" class="btn btn-primary">افزودن</button>
                             </div>
                         </form>
 
