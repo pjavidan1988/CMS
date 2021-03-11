@@ -524,52 +524,27 @@
     	==== Start features-taste -->
 	<div class="features skin1 features-taste section-bg text-white clearfix  pt-100 pb-100" style="background-image:url(assets/images/home2_bg2.jpg)">
 		<div class="container">
-			<div class="features-heading">
-				<h2 class="features-heading__title">ترکیب های متفاوت</h2>
-			</div>
 			<div class="row">
+                <?php
+                $widget1=listWidgetDefault1();
+                foreach ($widget1 as $value):
+                ?>
 				<div class="col-md-4">
 					<div class="features_list pt-50 pb-50">
 						<div class="features-images">
-							<img src="assets/images/icon-feature5.png" alt="">
+							<img src="admin/<?php echo $value['img']?>" alt="">
 						</div>
 						<div class="features-description">
-							<h4>کافئین</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
-						</div>
-					</div>
-					<div class="features_list  pt-50 pb-50">
-						<div class="features-images">
-							<img src="assets/images/icon-feature6.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>ویتامین</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+							<h4><?php echo $value['title'];?></h4>
+							<p><?php echo $value['text'];?></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-1">
 				</div>
-				<div class="col-md-4">
-					<div class="features_list  pt-50 pb-50">
-						<div class="features-images">
-							<img src="assets/images/icon-feature7.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>فولیک اسید</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
-						</div>
-					</div>
-					<div class="features_list  pt-50 pb-50">
-						<div class="features-images">
-							<img src="assets/images/icon-feature8.png" alt="">
-						</div>
-						<div class="features-description">
-							<h4>گلیسین</h4>
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
-						</div>
-					</div>
-				</div>
+                <?php
+                endforeach;
+                ?>
 			</div>
 		</div>
 	</div>

@@ -29,6 +29,7 @@
                                 <tr>
                                     <th>عنوان ویجت</th>
                                     <th> متن ویجت</th>
+                                    <th> تصویر</th>
                                     <th>ویرایش</th>
                                     <th>حذف</th>
                                 </tr>
@@ -41,6 +42,7 @@
                                     <tr>
                                         <td><?php echo $val['title']; ?></td>
                                         <td><a href="dashbord.php?m=widget1&p=detail&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i></a></td>
+                                        <td><img src="<?php echo $val['img']; ?>" width="60"></td>
                                         <td><a href="dashbord.php?m=widget1&p=edit&id=<?php echo $val['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-pencil"></i></a></td>
                                         <td><a href="dashbord.php?m=widget1&p=delete&id=<?php echo $val['id']; ?>" class="btn btn-outline-danger btn-xs"><i class="fa fa-trash"></i></a></td>
                                     </tr>

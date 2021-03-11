@@ -1,7 +1,9 @@
 <?php
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
-    addWidget1($data);
+    $folder="widget1-".rand();
+    $img=uploader('img',"img/widget1/",$folder,"widget1");
+    addWidget1($data,$img);
 }
 ?>
 
@@ -14,7 +16,7 @@ if(isset($_POST['btn'])){
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-left">
                         <li class="breadcrumb-item"><a href="dashbord.php?m=home&p=home">خانه</a></li>
-                        <li class="breadcrumb-item active">افزودن ویجت دوم جدید</li>
+                        <li class="breadcrumb-item active">افزودن ویجت جدید</li>
                     </ol>
                 </div>
             </div>
@@ -30,23 +32,26 @@ if(isset($_POST['btn'])){
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">افزودن ویجت دوم جدید</h3>
+                            <h3 class="card-title">افزودن ویجت جدید</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form role="form" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان خط اول ویجت</label>
-                                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان ویجت خط اول را وارد کنید">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان خط دوم ویجت</label>
-                                    <input type="text" class="form-control" name="frm[title2]" placeholder="عنوان ویجت خط دوم را وارد کنید">
+                                    <label for="exampleInputEmail1">عنوان ویجت</label>
+                                    <input type="text" class="form-control" name="frm[title]" placeholder="عنوان ویجت را وارد کنید">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">متن</label>
                                     <textarea type="text" class="form-control" name="frm[text]" placeholder="متن خود را بنویسید"></textarea>
+                                </div>
+                                <div class="form-group pt-4">
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i>اضافه کردن تصویر
+                                        <input type="file" name="img" id="input-b6" class="file">
+                                    </div>
+                                    <p class="help-block">حداکثر 32MB</p>
                                 </div>
                             </div>
                             <!-- /.card-body -->

@@ -3,9 +3,11 @@ ob_start();
 $id=$_GET['id'];
 $result=showEditWidget1($id);
 
+
 if(isset($_POST['btn'])){
     $data=$_POST['frm'];
-    editWidget1($data,$id);
+    $oldPic=$result['img'];
+    editWidget1($data,$id,'img',$oldPic);
     header("location:dashbord.php?m=widget1&p=list");
 }
 ?>
@@ -41,16 +43,20 @@ if(isset($_POST['btn'])){
                         <form role="form" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان خط اول ویجت</label>
+                                    <label for="exampleInputEmail1">عنوان ویجت</label>
                                     <input type="text" class="form-control" name="frm[title]" value="<?php echo $result['title'];?>">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">عنوان خط دوم ویجت</label>
-                                    <input type="text" class="form-control" name="frm[title2]" value="<?php echo $result['title2'];?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">متن ویجت</label>
                                     <textarea type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
+                                </div>
+                                <div class="form-group pt-4">
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i> اضافه کردن تصویر
+                                        <input type="file" name="img" id="input-b6" class="file">
+                                    </div>
+                                        <img src="<?php echo $result['img'];?>" width="60">
+                                    <p class="help-block">حداکثر 32MB</p>
                                 </div>
                             </div>
                             <!-- /.card-body -->
