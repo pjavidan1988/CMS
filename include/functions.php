@@ -49,4 +49,6 @@ switch ($m){
         include_once 'widget1.php';
     case 'logo':
         include_once 'logo.php';
+    case 'page':
+        include_once 'page.php';
 }

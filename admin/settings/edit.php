@@ -77,7 +77,10 @@ if(isset($_POST['btn'])){
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">درباره ما</label>
-                                    <textarea type="text" class="form-control" name="frm[aboutus]" ><?php echo $settings['aboutus'];?></textarea>
+                                    <textarea id="editor1" type="text" class="form-control" name="frm[aboutus]" ><?php echo $settings['aboutus'];?></textarea>
+                                    <script>
+                                        CKEDITOR.replace('editor1');
+                                    </script>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">فیسبوک</label>
@@ -105,7 +108,10 @@ if(isset($_POST['btn'])){
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">متن روی اسلایدر</label>
-                                    <textarea type="text" class="form-control" name="frm[main_slider_text]" ><?php echo $settings['main_slider_text'];?></textarea>
+                                    <textarea id="editor2" type="text" class="form-control" name="frm[main_slider_text]" ><?php echo $settings['main_slider_text'];?></textarea>
+                                    <script>
+                                        CKEDITOR.replace('editor2');
+                                    </script>
                                 </div>
                             </div>
                             <!-- /.card-body -->

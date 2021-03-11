@@ -48,7 +48,10 @@ if(isset($_POST['btn'])){
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">متن ویجت</label>
-                                    <textarea type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
+                                    <textarea id="editor1" type="text" class="form-control" name="frm[text]" ><?php echo $result['text'];?></textarea>
+                                    <script>
+                                        CKEDITOR.replace('editor1');
+                                    </script>
                                 </div>
                                 <div class="form-group pt-4">
                                     <div class="btn btn-default btn-file">

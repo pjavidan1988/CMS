@@ -55,7 +55,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">متن خبر</label>
-                    <textarea type="text" class="form-control" name="frm[text]" placeholder="متن خبر را وارد کنید"></textarea>
+                    <textarea id="editor1" type="text" class="form-control" name="frm[text]" placeholder="متن خبر را وارد کنید"></textarea>
+                    <script>
+                        CKEDITOR.replace('editor1');
+                    </script>
                   </div>
                   <div class="form-group">
                     <label>دسته بندی</label>
